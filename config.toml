@@ -1,6 +1,6 @@
 LanguageCode = "en-us"
 Title = "Just a Blog in the Park"
-BaseUrl = "http://Artiavis.github.io/"
+BaseUrl = "http://justabloginthepark.com/"
 log = true
 copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2017"
 # enableGitInfo = true
