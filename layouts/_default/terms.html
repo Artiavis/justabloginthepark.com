@@ -1,0 +1,14 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ .Title }}</h1>
+    <ul id="tags">
+    {{ range $key, $value := .Data.Terms.ByCount }}
+    <li><a href="{{ "/tags/" | relLangURL }}{{ $value.Name | urlize }}"><i class="fa fa-tag" aria-hidden="true"></i> {{ $value.Name }}</a>: {{ $value.Count }}</li>
+    {{ end }}
+    </ul>
+  </div>
+</section>
+{{ partial "pager" . }}
+{{ partial "footer" . }}

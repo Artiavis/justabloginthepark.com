@@ -1,0 +1,60 @@
+LanguageCode = "en-us"
+Title = "Just a Blog in the Park"
+BaseUrl = "http://Artiavis.github.io/"
+log = true
+copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2017"
+# enableGitInfo = true
+
+defaultLayout = "post"
+
+paginate = 5
+theme = "hemingway"
+# googleAnalytics = ""
+DisqusShortname = "justabloginthepark"
+verbose = true
+verboseLog = true
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:year/:month/:day/:title/"
+  page = "/:slug/"
+
+[params]
+  author = "Jeff Rabinowitz"
+  date_format = "Mon Jan 02, 2006"
+  Title = "Just a Blog in the Park"
+  # sharingicons = false
+  disable_sri = true
+  hljs_version = "9.11.0"
+  fa_version = "4.7.0"
+
+  [params.highlight]
+  # style = "github"
+  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "javascript", "ini", 
+               "java", "json", "markdown", "python", "ruby", "sql", "tex"]
+
+  [[params.social]]
+  url = "/about"
+  fa_icon = "fa-user-circle-o"
+
+  [[params.social]]
+  url = "/tags"
+  fa_icon = "fa-tags"
+
+  [[params.social]]
+  url = "https://github.com/Artiavis"
+  fa_icon = "fa-github"
+
+  [[params.social]]
+  url = "https://linkedin.com/in/JeffreyCRabinowitz"
+  fa_icon = "fa-linkedin"
+
+  # [[params.social]]
+  # url = "https://www.dropbox.com/s/wttiymi3kkxdxww/jeff_rabinowitz_resume_2016_05_26.pdf?dl=1"
+  # fa_icon = "fa-file-pdf-o"
+
+  [[params.social]]
+  url = "/index.xml"
+  fa_icon = "fa-rss"
