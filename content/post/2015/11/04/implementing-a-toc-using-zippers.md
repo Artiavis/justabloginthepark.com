@@ -8,7 +8,7 @@ As I continue my forays with Clojure, I'm finding it enjoyable (if not entirely
 productive) to hack with it on 
 [Cryogen](https://github.com/cryogen-project/cryogen), a nifty little
 blog generator 
-[I already discussed recently](/posts/2015-10-24-returning-to-blogging-with-cryogen.html).
+[I already discussed recently]({{<relref "returning-to-blogging-with-cryogen.md">}}).
 
 On Sunday I had the privilege
 [of making my first pull request](https://github.com/cryogen-project/cryogen-core/pull/51).
@@ -39,7 +39,7 @@ should wind up with a TOC which looks like the following:
 <table class="table"><tr>
 <thead><th>Structure of Document</th><th>Appearance of TOC</th></thead>
 <td>
-```
+<pre>
 h1. Introduction
     h2. Exposition
     h2. Problem Statement
@@ -48,7 +48,7 @@ h1. Proposed Solutions
     h2. Solution 2
 h1. Conclusion
     h2. Takeaways
-```
+</pre>
 </td>
 <td>
 <ol>
@@ -73,11 +73,11 @@ takeaways header? Something like this?
 <table class="table"><tr>
 <thead><th>Structure of Document</th><th>Appearance of TOC</th></thead>
 <td>
-```
+<pre>
 h2. Solution 1
 h2. Solution 2
 h1. Takeaways
-```
+</pre>
 </td>
 <td>
 <ol>
@@ -108,7 +108,7 @@ Visually, this organization should be respected:
 <table class="table"><tr>
 <thead><th>Structure of Document</th><th>Appearance of TOC</th></thead>
 <td>
-```
+<pre>
 h2. Solution 1
     h3. Aspect 1
     h3. Aspect 2
@@ -116,7 +116,7 @@ h2. Solution 2
     h4. Elaboration
     h3. Complications
 h1. Takeaways
-```
+</pre>
 </td>
 <td>
 <ol>

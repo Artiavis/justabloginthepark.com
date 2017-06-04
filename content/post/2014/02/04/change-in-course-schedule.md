@@ -4,7 +4,7 @@ date = "2014-02-04"
 tags = ["school"]
 +++
 
-Three months ago, [I posted my tentative schedule](../2012-11-18-classes-for-final-semester.html) for this semester, my final one in
+Three months ago, [I posted my tentative schedule]({{<relref "classes-for-final-semester.md">}}) for this semester, my final one in
 undergrad. At the time, I was very optimistic about taking _Systems Programming_ because I had been recommended the
 professor, Brian Russell, by my roommate. In the end, I switched it out for a seminar in _Gender and Sexuality in Judaism_. Here's how.
 
@@ -85,4 +85,4 @@ once, before I graduate. Especially if it gives me the chance to flex my LaTeX s
 
 My final schedule is posted below.
 
-![Final Schedule for Final Semester](/content/images/2014/Feb/Spring2014_FinalSchedule.PNG)
+![Final Schedule for Final Semester](/img/Spring2014_FinalSchedule.png)

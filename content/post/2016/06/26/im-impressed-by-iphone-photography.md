@@ -1,11 +1,11 @@
 +++
-title = "I'm Impressed by iPhone Photograpy"
+title = "I'm Impressed by iPhone Photography"
 tags = ["photography"]
 date = "2016-06-26"
 +++
 
 My wife and I got back from our honeymoon in Italy a few weeks ago
-([which you can read about here](/posts/2016-06-26-first-holiday-in-italy.html)),
+([which you can read about here]({{<relref "first-holiday-in-italy.md">}})),
 and I need to remark on how impressed I am by the performance our iPhones.
 Both my wife's iPhone 5S and my iPhone 6 performed spectacularly, taking
 hundreds of photos for us during our ten days on holiday.

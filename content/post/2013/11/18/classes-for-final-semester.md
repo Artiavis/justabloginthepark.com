@@ -82,7 +82,7 @@ tuition dollars to go towards something meaningful.
 <i class="fa fa-smile-o"></i>
 
 
-![Spring 2014 Tentative Schedule](/img/Spring2014_TentativeSchedule_PNG.png)
+![Spring 2014 Tentative Schedule](/img/Spring2014_TentativeSchedule.png)
 
 Attached is a picture of my tentative schedule of classes for next semester.
 It's a little bit odd because engineering classes are always during the early
@@ -94,4 +94,4 @@ class and nothing going on then. Hopefully that means I have Fridays off!
 
 Well it's now February and I've changed up my class schedule a bit. For anyone
 who's made it this far, you should know my final schedule has changed slightly.
-[Read about it here](/posts/2014-02-04-change-in-course-schedule.html).
+[Read about it here]({{<relref "change-in-course-schedule.md">}}).

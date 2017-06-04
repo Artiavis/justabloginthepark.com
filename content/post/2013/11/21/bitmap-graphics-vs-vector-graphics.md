@@ -6,7 +6,7 @@ date = "2013-11-21"
 +++
 
 One astute reader of 
-[a previous post](/posts/2013-11-04-smoothing-the-curves.html) observed that
+[a previous post]({{<relref "smoothing-the-curves.md">}}) observed that
 although I seemed to imply that only 
 [bitmaps](https://en.wikipedia.org/wiki/Bitmap)
 can be digital images, there also exists such a thing as 
@@ -29,7 +29,7 @@ I would like to address the second point, which may be a point of confusion. In 
 
 ### Bitmaps and Digital Data
 
-As discussed [in the previous post](/smoothing-the-curves/), bitmaps (also known
+As discussed [in the previous post]({{<relref "smoothing-the-curves.md">}}), bitmaps (also known
 as raster images) are a kind of digital image. Actually when people discuss
 digital images they are _**almost always**_ referring to bitmaps. This is in no
 small part due to the ready availability of bitmaps in the form of digital

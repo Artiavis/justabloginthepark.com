@@ -5,7 +5,7 @@ date = "2013-11-04"
 description = "Meditation upon visualizing digital signal processing upon images"
 +++
 
-In [a previous post](/posts/2013-10-30-how-to-pump-up-the-bass.html), I discussed the physical
+In [a previous post]({{<relref "how-to-pump-up-the-bass.md">}}), I discussed the physical
 interpretation of digital music (and all digital audio) as both a time-varying
 signal and a frequency-varying signal. This, of course, makes intuitive sense -
 as we spend three or four minutes listening to a song, we can hear the guitars

@@ -4,11 +4,11 @@ date = "2014-01-23"
 tags = ["travel"]
 +++
 
-Last week, when I got back to JFK after my [Israel trip](/../2014-01-17-pathways-israel.html), I was kind of dreading going through
+Last week, when I got back to JFK after my [Israel trip]({{<relref "pathways-israel.md">}}), I was kind of dreading going through
 customs &ndash; and not because I was carrying contraband. Last time I went through border control, I spent what felt
 like forty five minutes (after a twelve hour flight, no less) waiting to go to the bathroom and grab my luggage and
 scram. However, this time around, I saw something which piqued my interest, and somewhat reminded me of my earlier
-[eigenface](/../the-eigenfacebook/) project.
+[eigenface]({{<relref "the-eigenfacebook.md">}}) project.
 
 Although there was a line of people waiting for real-live humans to clear them through border control, there was also
 two rows of kiosks with webcams, passport scanners, and touch screens:
