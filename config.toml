@@ -1,6 +1,6 @@
-LanguageCode = "en-us"
-Title = "Just a Blog in the Park"
-BaseUrl = "http://justabloginthepark.com/"
+languageCode = "en-us"
+title = "Just a Blog in the Park"
+baseUrl = "http://justabloginthepark.com/"
 log = true
 copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2017"
 # enableGitInfo = true
@@ -9,8 +9,8 @@ defaultLayout = "post"
 
 paginate = 5
 theme = "hemingway"
-# googleAnalytics = ""
-DisqusShortname = "justabloginthepark"
+googleAnalytics = "UA-45496110-1"
+disqusShortname = "justabloginthepark"
 verbose = true
 verboseLog = true
 
