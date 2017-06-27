@@ -3,7 +3,14 @@ date = "2017-06-18T13:12:46-04:00"
 description = "Wherein I discuss some of the interesting aspects of how Clojure achieves its namespace concepts, which are (to a large extent) a figment of the compiler's imagination."
 tags = ["programming", "clojure"]
 title = "Clojure and the Esoteric Mysteries of Namespaces"
+draft = true
 +++
+
+If you've ever been programming in Clojure and encountered an error which looks
+something like, `IllegalStateException("Can't change/establish root binding of: *ns* with set")`,
+read on!
+
+## Preface
 
 I recently had the drive/opportunity to deep-dive on how Clojure's namespaces
 function and how they provide a simple abstraction using the concept of Clojure's
@@ -16,7 +23,32 @@ A a fair warning, this requires a far bit of gory Clojure compiler internals to
 really understand. I'm going to attempt to walk through the relevant bits, but
 it may not make much sense without also reading the relevant portions of source
 code. Thankfully, Lisps are simple to understand, so it should only take a few
-hours (instead of days or weeks).
+hours (instead of days or weeks). However, if you just want the short version/the spoiler,
+here's the TL;DR:
+
+````clojure
+;; In Clojure, this works:
+(ns namespace-1)
+(println *ns*)
+;; #namespace[namespace-1]
+
+;; This also works
+(in-ns 'namespace-2)
+(clojure.core/println clojure.core/*ns*)
+;; #namespace[namespace-2]
+;; you could use
+(refer-clojure)
+;; to use the shorthand syntax available in the previous example
+
+;; However, this fails miserably at runtime, and there is no good documentation
+;; available which explains why this is so:
+(defn -main
+  [& args]
+  (in-ns 'namespace-3)
+  (refer-clojure)
+  (println *ns*))
+;; Will shout and complain that you can't set a Var that's not locally bound
+````
 
 ## What's in a Name?
 
@@ -283,6 +315,106 @@ the local bindings set up correctly. If you need to do runtime code loading (via
 `eval` or the like), you could similarly set up new namespaces for that code.
 (Technically Clojure does not guard against malicious actors, so custom classloaders
 may be needed if you're loading code from an untrusted party.)
+
+## Bringing it All Together
+
+To save you some scrolling, I'll repeat my example from above, down here:
+
+````clojure
+;; In Clojure, this works:
+(ns namespace-1)
+(println *ns*)
+;; #namespace[namespace-1]
+
+;; This also works
+(in-ns 'namespace-2)
+(clojure.core/println clojure.core/*ns*)
+;; #namespace[namespace-2]
+;; you could use
+(refer-clojure)
+;; to use the shorthand syntax available in the previous example
+
+;; However, this fails miserably at runtime, and there is no good documentation
+;; available which explains why this is so:
+(defn -main
+  [& args]
+  (in-ns 'namespace-3)
+  (refer-clojure)
+  (println *ns*))
+;; Will shout and complain that you can't set a Var that's not locally bound
+````
+
+*Why is it that the first two examples work (during compilation and the REPL) and the last one does not (at runtime)?*
+I've already hinted why above, but I'll give the long-form explanation.
+
+In the interest of efficiency and expediency, the compiler and the REPL both
+pretend to be within an interactive user session, and allow the global 
+`*ns*` variable to be manipulated fairly freely. Every `def` and `defn` call
+(e.g. every declaration of a global variable, whether that variable is a function or not)
+translates into something like, &ldquo;Take this object and shove it into the
+named box within the compartment named by `*ns*`.&rdquo; In order to ensure that
+it's easy to assign those boxes into those compartments, the compiler and REPL
+both take pains to ensure that `*ns*` looks like what a user would expect it to,
+such that compilation proceeds in an orderly fashion.
+
+This does not hold for the Clojure runtime itself! When someone calls a `-main`
+function in Clojure, there is no magic call of `with-bindings` like
+those which occur in `clojure.main` and `clojure.lang.RT` to allow `*ns*` to
+be freely tweaked. As such, this will fail with the error
+`IllegalStateException("Can't change/establish root binding of: *ns* with set")`.
+Fuzzy and unclear before, it is now obvious: *before*, the compiler and REPL were
+root-binding `*ns*`, so taht we would never see this error! *Now*, we're on our
+own, and we'll be blindsided by a fastball if we aren't either deeply engrossed
+in the language runtime fundamentals, or previously warned of this quirk!
+
+
+## Should Clojure be nicer about this?
+
+After I explained all of the above to a colleague at work
+([related to this Github issue](https://github.com/ztellman/primitive-math/issues/8)),
+he was justifiably upset.
+[He submitted a ticket on the Clojure mailing list](https://groups.google.com/forum/#!topic/clojure/6CXUNuPIUyQ)
+and eventually received a response from Alex Miller himself. (I chimed in toward the end
+but the conversation was essentially concluded by the time I added my two cents.)
+
+The debate essentially goes as follows:
+
+> Clojure User: Since `*ns*` and `in-ns` work consistently during compilation
+> and in the REPL, they aught to behave the same way even at runtime.
+> To do so is to violate the [principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment).
+> Please provide a shim to the runtime such that even when launching
+> `gen-class`ed Clojure from the Java command line,
+> or when invoking the runtime via the Java API,
+> `*ns*` and `in-ns` will have
+> received the same treatment as they get in other contexts.
+
+> Clojure Maintainer: There isn't any canonical or deliberately consistent
+> behavior of `*ns*` or `in-ns` in the manner you perceive. The compiler happens
+> to work the way it does. `clojure.main`/Leiningen/Boot are by no means the
+> canonical implementations; they provide the same setup for the convenience of
+> the REPL, and happen to have chosen consistent conventions, but for us to impose
+> those conventions unilaterally would be to take an actual stance and dictate
+> that there is a canonical implementation.
+
+> Clojure User: It's apparent that the community has consolidated around a canonical
+> implementation, and to deny that is to consign developers to stumble upon this
+> every few months, until this happens again. Although theoretically it was not
+> necessary to provide this shim to achieve the language runtime, it is needed
+> to avoid shocking users.
+
+> Clojure Maintainer: Sure, open a ticket!
+
+> Clojure User: [Done.](https://dev.clojure.org/jira/browse/CLJ-2185)
+
+
+## Update
+
+After the initial publication of this post, I got some push backs from friends
+and colleagues that it did not sufficiently motivate why namespaces have
+counter-intuitive behavior and what can be done about it. Therefore I've taken
+the approach (from which I normally refrain) of updating this post with more
+information and content, specifically the sections on &ldquo;Bringing it All Together&rdquo;,
+&ldquo;Should Clojure be nicer about this?&rdquo;, and the TL;DR at the top.
 
 ## References
 
