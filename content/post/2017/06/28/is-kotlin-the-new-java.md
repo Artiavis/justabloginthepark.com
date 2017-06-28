@@ -1,21 +1,17 @@
 +++
-date = "2017-06-26T23:13:27-04:00"
-description = "Kotlin is one of the new JVM programming languages on the block. What is its niche? Does it supplant Java within its own niche? I don't have the answers but I have some thoughts on the matter."
+date = "2017-06-28T00:20:27-04:00"
+description = "Kotlin is one of the new JVM programming languages on the block. What is its niche? Does it supplant Java within its own niche? I have my own opinions on the matter, but only time will tell."
 tags = ["programming", "java", "kotlin", "clojure", "scala"]
 title = "Is Kotlin the new Java?"
-draft = true
 +++
 
 One of the programming languages I've (essentially) been ignoring for the past
 couple of years has been [Kotlin](http://kotlinlang.org/),
 the &ldquo;better Java&rdquo; from Jetbrains,
-the author of IntelliJ and other IDE's.
-
-I first heard about Kotlin around 2013, which happens to be the time that I was
-doing some light Android programming. At the time, it sounded interesting, but
-not much enough to invest my energies in its study; (since then, 
-[I've been focusing more upon Clojure](/tags/clojure/) than other languages).
+the author of IntelliJ and other IDE's.[^first-heard-about-kotlin]
 Recently, Kotlin has come back into focus for me for the following reasons:
+
+[^first-heard-about-kotlin]: I first heard about Kotlin around 2013, which happens to be the time that I was doing some light Android programming. At the time, it sounded interesting, but not much enough to invest my energies in its study.
 
 * [Google finally announced official Android support for Kotlin](https://developer.android.com/kotlin/index.html)
 * Steve Yegge, that infamously opinionated programming language enthusiast,
@@ -57,9 +53,13 @@ features in the language, JVM developers should adopt a language which can.
 
 If not using core Java, a meta-language is necessary. But Java's preferred
 meta-language, annotations, are already clearly insufficient, in that they are
-opt-in. Thus, a clean-break through an entirely novel programming language
-targeting the JVM becomes necessary. There are three primary candidates bandied
-about:
+opt-in.
+[As motivated above]({{< ref "#some-features-need-to-exist-at-the-language-level" >}}),
+the road to hell is paved with good intentions; something more is needed;
+a clean-break through an entirely novel programming language
+targeting the JVM but with both strong backwards compatibility and stronger intelligence
+is the simplest solution. There are three primary candidates bandied
+about in modern language discussions:
 
 * [Kotlin](http://kotlinlang.org/), a newish language by Jetbrains, maker of IntelliJ. Considered by many
   to be a primary choice for Android development, although it is seeing adoption
@@ -95,8 +95,11 @@ language attempting to ascend Java's throne as king of the programming languages
    requirement is more of a marginal judgement value. Where do high-value
    language features stop and trivia-based language features arrive?
 
-If you're interested in skipping to the results,
-[click here]({{< ref "#scoring-java-replacements" >}})
+If you're interested in skipping to the Kotlin assessment,
+[click here]({{< ref "#kotlin-the-new-java" >}}).
+If you're interested in skipping to the conclusion with its total scores for
+each programming language based on the criteria above,
+[click here]({{< ref "#scoring-java-replacements" >}}).
 
 ## Clojure is a Lisp, not a Java replacement
 
@@ -122,67 +125,29 @@ used on the Java side), but this is the exception rather than the rule.
 
 Here is how I score Clojure as a Java replacement:
 
-1. Clojure only gets fractional marks on the primary issues of concern:
-   1. Clojure itself frowns upon POJO's, preferring maps for everything.
-      Clojure maintainers sometimes call this [the universal schema](http://docs.datomic.com/schema.html),
-      because keys can be freely added without requiring type changes. There is
-      some merit to this argument, but it is distinctly foreign to cultural Java
-      code. Clojure *does* provide `record`s, and *does* have machinery to create
-      classes, but neither are really POJO generation. 0 points.
-   1. Intelligent data structures are one of Clojure's greatest strengths.
-      Clojure has immutable data structures by default, and many concurrency
-      operators which operate upon them. Clojure gets full marks here.
-   1. Clojure takes an approach often called 
-      &ldquo;[`nil` punning](https://blog.scalac.io/2015/05/31/dealing-with-npe.html)&rdquo;
-      (don't ask me where the name came from).
-      This approach, common in Python etc., treats `nil` like an `Optional` in
-      Scala, and will basically short-circuit function evaluation if a `nil` is
-      passed in. In this way, at the end of a data transform, if anything was `nil`,
-      you can just inspect its value at the end of the pipeline. Although this
-      works passably in dynamic languages, it's not a real solution to null values, and
-      (in my opinion) is an even weaker option than having a real `Optional` type.
-      Again, 0 points.
-1. Although Clojure *can* generate classes which match those Java provides, they
-   are strictly opt-in (not generated by default). The other prominent way of
-   calling Clojure from Java is through the [Clojure API for Java](https://clojure.github.io/clojure/javadoc/clojure/java/api/package-summary.html).
-   This essentially consists of calling functions like so:
+Feature               | Score | Explanation
+----------------------|-------|---------------
+POJOs                 | 0     | Clojure prefers loosely maps to typed objects[^universal-schema], but does not really go in for POJO's[^records-are-not-pojos]. For Java programmers looking for POJO generation, this is confusing and not up their alley.
+Null Safety           | 0     | Clojure takes an approach often called &ldquo;[`nil` punning](https://blog.scalac.io/2015/05/31/dealing-with-npe.html)&rdquo;, which is like an `Option` type[^nil-punning-python]. However, although Clojure's standard library is well-implemented for nil-punning, it does not help with Java-style development.
+Immutable Collections | 1     | Clojure's persistent data structures aren't just superb, they have set the standard for persistent data structures in mainstream languages. [Even Google's closure compiler](https://github.com/google/closure-compiler/blob/master/src/com/google/javascript/jscomp/newtypes/PersistentMap.java) uses Clojure's implementation.
+Interop               | 0     | Although Clojure *can* generate classes which match those Java provides, they are strictly opt-in (not generated by default). The default means of invoking Clojure from Java requires going through a facade.[^clojure-java-api-example]
+Performance           | 0     | Clojure's indirections and abstractions generally hurt performance relative to Java. Between boxing all variables, laziness, persistent data structures, and reflection when calling Java API's, Clojure's performance is much slower than Java's for equivalent, idiomatic code.[^clojure-performance-apology]
+Learning Curve        | 0     | Although Clojure's runtime is internally consistent, it presents many novel concepts for a career Java programmer, which draw out the ramp-up-period. Python/Ruby/JavaScript programmers may have an easier time.
+No Language lock-in   | 0     | Clojure and Java are essentially distinct, albeit complementary, languages and runtimes. Strong buy-in is essential to pursuing a Clojure investment.[^clojure-java-synergies]
+Few Esoteric Features | 1     | Clojure's beauty as a Lisp is that there aren't any hidden features waiting to trip you up. Its libraries are opt-in and can be adopted slowly, rather than all-at-once.
+Total                 | 2     | Clojure was never meant to replace the Java language so much as the Java low-level programming paradigms. It cannot be considered a Java language successor.
 
-    ````java
-     Object object = Clojure.var("my-namespace", "my-object")
-     Object result = Clojure.var("clojure.core", "+").invoke(1, 2)
-    ````
-   It's certainly workable, but it's not native enough. 0 points.
-
-1. Clojure's runtime adds several layers of indirection, which can hurt performance
-   relative to Java. Between boxing all variables, laziness, reflection when calling
-   Java API's, and immutable data structures by default, Clojure's performance is
-   much slower than Java's for equivalent, idiomatic code. That isn't to say that
-   Clojure is wasting cycles or poorly optimized! Rather, its runtime model is far
-   more dynamic than that of a Java-like, and thus cannot be used as a sight-unseen
-   replacement with identical performance. 0 points.
-1. Clojure's language runtime is incredibly self-consistent, but also has many novel
-   concepts which can take many weeks to acclimate towards, _especially_ for Java
-   developers. What Clojure has in terms of simplicity it suffers from in terms of
-   novelty to the un-initiated. 0 points.
-1. Going between Clojure and Java requires a large mental shift, and truthfully,
-   Java and Clojure excel at far different things. Java, with its dogmatic emphasis
-   on Object-oriented Programming, is good for modeling state. Clojure, as a Lisp,
-   is good at modeling... nearly everything else. Although they're strong
-   complements for each other, they're essentially distinct languages. 0 points.
-1. I'd say that, for the most part, Clojure doesn't have too many esoteric features.
-   Some of the libraries for Clojure are more or less intellectually challenging,
-   but as a Lisp, the core language is tiny; everything else is a libray which can
-   be looked up fairly easily. And because Clojure doesn't have custom readers,
-   most &ldquo;shortcuts&rdquo; can be looked up in the docs. 1 point.
-
-This is not meant as an objective condemnation of Clojure! Clojure is simply far
-and away completely inconceivable as an intentional Java replacement. It cannot
-be, in any way, considered a Java successor.
+[^universal-schema]: Clojure maintainers sometimes call this [the universal schema](http://docs.datomic.com/schema.html)
+[^records-are-not-pojos]: Clojurians might object that [records](https://clojure.org/reference/datatypes) have *some* POJO-like semantics, but even so, Java programmers will be confused about why their POJO implements the `Map` interface.
+[^nil-punning-python]: Nil punning will be instantly recognizable to Python and Ruby developers, as the nil type is used as a form of `Option` monad in those languages. Its value depends on how good core libraries are for manipulating potentially nullable results.
+[^clojure-java-api-example]: See https://clojure.github.io/clojure/javadoc/clojure/java/api/package-summary.html. The overall effect makes sense considering how dynamic Clojure is, but is unpleasant to call from Java.
+[^clojure-performance-apology]: That isn't to say that Clojure is wasting cycles or poorly optimized! Rather, its runtime model is far more dynamic than that of a Java-like, and thus cannot be used as a sight-unseen replacement with identical performance.
+[^clojure-java-synergies]: Going between Clojure and Java requires a large mental shift, and truthfully, synergize through their disparate strengths and weaknesses. Java, with its dogmatic emphasis on Object-oriented Programming, is good for modeling state. Clojure, as a Lisp, is good at modeling business logic. Although they complement each other, going back and forth between them is mentally challenging.
 
 ## Scala is a good ML experiment, but a poor Java replacement
 
 I've been a bit leery on Scala since a friend showed me
-  [a video of a prominent Scala contributor raging against Scala's idiosyncrasies and mistakes](https://www.youtube.com/watch?v=uiJycy6dFSQ).
+[a video of a prominent Scala contributor raging against Scala's idiosyncrasies and mistakes](https://www.youtube.com/watch?v=uiJycy6dFSQ).
 Although thematically I enjoy ML-style languages (the set of which it is technically a member)
 and syntactic sugaring, I lean towards thinking that Scala
 as a language is far too highbrow and/or unstable to excel at typical industrial/enterprise use cases.
@@ -212,7 +177,7 @@ of Scala identified in the above talk:
         scala> List(1, 2, 3) contains "some string"
         res2: Boolean = false
         ````
-   2. In general, many of Scala's functions _also_ use/abuse the implicits anti-feature,
+   2. In general, many of Scala's functions _also_ use (or abuse) the implicits anti-feature,
       causing sheer terror in functions when even the slightest
       changes to the syntax occur:
 
@@ -248,49 +213,102 @@ language to spot these mistakes or to prevent them from happening.
 
 But I digress &mdash; let's score Scala as measured.
 
-1. Scala is pretty solid on my desired features of a Java successor:
-   1. Scala can generate POJO's just fine.
-   1. Scala has both mutable and immutable collections, which is important,
-      although Paul does rant above that the collections API's are half-baked
-      due to over-reliance on the global type hierarchy. Nevertheless, I have to
-      give this one to Scala.
-   1. [As linked above](https://blog.scalac.io/2015/05/31/dealing-with-npe.html),
-      Scala prefers to handle optional values using its `Option` type. I love the
-      `Maybe`/`Option` monad and I think that this is great, but it's a little
-      bit lackluster in that it doesn't solve Java's `null` dilemmas.
-      I'll give this a half point since Scala can model optional types, but it
-      loses points because it has no way of actually protecting itself from null pointers.
-1. When it comes to calling Scala from Java, things are still a bit manual.
-   Calling some classes is rather hideous and convoluted. From Paul's talk above,
-   [he reported a bug](https://issues.scala-lang.org/browse/SI-4389) with Scala
-   because he couldn't invoke some &lsquo;simple&rsquo; Scala method from Java.
-   The author of Scala reported that even he could not get the code to compile
-   under Java, and gave up. [Some brave/bored souls](https://stackoverflow.com/questions/11678756/calling-scala-monads-from-java-map)
-   on Stack Overflow found some solutions, most of which involve hideous references
-   to nested types, or required hand-rolling anonymous types which Scala's compiler
-   autogenerates. So I'm going to fail Scala here, in that its core routines
-   can often result in unwieldy and inexplicable types being inserted all over
-   the place. I'm going to give this 0 points for simplicity.
-1. Most of Scala's indirections have already been documented above.
-   They arise from how Scala doesn't have good ways of statically resolving
-   types universally, and so inserts glue code and upcasts in many places to
-   achieve its &ldquo;power&rdquo;. From what I understand, Scadla still runs a
-   bit faster than Clojure, but between all the conversions and casts it has
-   going on, it can still wind up being a good amount slower than the equivalent
-   Java code. 1/2 a point.
-1. Scala, as you may have already guessed, has a _huge_ learning curve. You need
-   to learn all the things _not_ to do in the language, like avoiding
-   [type classes and using implicits yourself](http://twitter.github.io/effectivescala/#Types and Generics-Implicits),
-   and how not to shoot yourself in the foot with the basic language runtime. 0 points.
-1. Going between Scala and Java does not appear to be for the faint of heart.
-   Scala's type system is so deep (or deeply broken, depending on your viewpoint)
-   that going into or out of the Java layer involves sacrificing a fortune of
-   type hinting to the compiler. And calling Scala from Java looks like something
-   from a nightmare in all but the simplest or most wrapped scenarios. 0 points.
-1. Hahahaha of course Scala has esoteric features, 0 points.
+Feature               | Score | Explanation
+----------------------|-------|---------------
+POJOs                 | 1     | Scala has this
+Null Safety           | 0.5   | Scala has `Option`, which is close
+Immutable Collections | 1     | Scala has this
+Interop               | 0     | Scala can call Java, but Java struggles to call Scala in more advanced use cases. [Paul reported a bug](https://issues.scala-lang.org/browse/SI-4389) where Java could not call the `map` function from Scala; Scala's author gave up on trying to make it work.
+Performance           | 0.5   | Scala *is* compiled, but is riddled with performance pitfalls due to abuse of implicits and the boxing which implicits often perform under-the-hood. It ends up being faster than Clojure, but still slower than Java.
+Learning Curve        | 0     | Scala's learning curve is massive and quite infamous. [Twitter warns against using type classes and implicits due to the pitfalls involved.](http://twitter.github.io/effectivescala/#Types%20and%20Generics-Implicits)
+No Language lock-in   | 0.5   | Although technically Scala and Java code can call each other, and both are statically typed, this looks like a bit of a one-way door. Java can't infer enough about Scala's type system to make calling the most powerful Scala code easy. And Java can't embed types in a meaningful way to Scala's compiler.
+Few Esoteric Features | 0     | As mentioned above, Scala's use of implicits trips up even veteran Scala programmers regularly. Immutables alone are enough to cost this point to Scala.
+Total                 | 3.5   | Scala has a lot going on for it, and can be used to great effect by smart, driven programmers, but has enough dark corners and mistakes to make it a poor choice for an average enterprise programming team.
 
 ## Kotlin, the new Java?
 
+Kotlin is a neat little language out of [JetBrains](https://www.jetbrains.com/),
+the company behind the venerable 
+[IntelliJ IDEA](https://www.jetbrains.com/idea/) products.
+When JetBrains first announced Kotlin,
+[they motivated it thus](https://blog.jetbrains.com/kotlin/2011/08/why-jetbrains-needs-kotlin/):
+
+> [I]t's about our own productivity... Although we’ve developed support for
+> several JVM-targeted programming languages, we are still writing all of our
+> IntelliJ-based IDEs almost entirely in Java... 
+> We want to become more productive by switching to a more expressive language.
+> At the same time, we cannot accept compromises in terms of either Java interoperability...
+> or compilation speed.
+
+In practice, Kotlin is a pragmatic language which builds upon the (now aging)
+primitives Java provided several years ago. Like C# before it, Kotlin tries to
+polish up and fuse together great features of other mainstream programming
+languages. It is neither a compiler research project like Scala nor the
+slow-moving behemoth which is the Java language itself. Like Clojure and Scala,
+Kotlin manages to achieve the following remarkable language features without
+sacrificing JVM6 compatibility:
+
+* Seamless POJO generation
+* Streaming API's
+* Labmdas
+* `null` is a recognized and first-class aspect of the type system
+* [Declaration-site variance](https://kotlinlang.org/docs/reference/generics.html#declaration-site-variance) (more powerful generics)
+* [Immutable data structures](https://kotlinlang.org/docs/reference/collections.html) (technically read-only and mutable variations)
+* [Extension methods](https://kotlinlang.org/docs/reference/extensions.html)
+* [Asynchronous routines](https://kotlinlang.org/docs/reference/coroutines.html)
+
+Even when using Java 8, many of these features are simply unimaginable as future
+additions to the Java programming language. Java may require a clean break to
+implement many of these features, even though technically many of them could be
+introduced in a backwards-compatible manner. Yet, many of these features have
+been available in C# for years now.
+
+### Kotlin generates Java fluent code
+
+The truly unique thing about Kotlin among the mainstream JVM languages
+(sorry [Ceylon](https://ceylon-lang.org/) and [Gosu](https://gosu-lang.github.io/)!)
+is that Kotlin 
+[*accomplishes all these features in a Java-fluent manner!*](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
+
+1. POJO's generated by Kotlin are nearly identical to Java POJO's
+2. Kotlin extension methods translate into run-of-the-mill Util classes
+3. The type system treats all references incoming from Java as potentially null,
+   and once data types are imported into Kotlin, are presumed to never be null
+   (unless opted into). For publicly exported API's, Kotlin will add null guards
+   to guarantee that Java code cannot misbehave and pass nulls into Kotlin.
+4. Kotlin is smart enough to know about generics within its type system, but will
+   export these types to Java in a way it can understand.
+5. Kotlin internally pretends that integers, doubles, etc are objects of types
+   `Int` and `Double`. But when compiling, Kotlin knows that creating boxed numerics
+   is a method of last resort. Whenever possible, Kotlin will prefer the primitive
+   types `int` and `double` over Java's `Integer` and `Double`.
+6. Kotlin's type system differentiates between mutable and immutable data structures,
+   but during compilation, all `List` types translate to e.g. `java.util.ArrayList`,
+   *whether or not* they were marked as being mutable.
+
+In these ways, Kotlin manages to have its cake and eat it too. Java code calling
+Kotlin code need never know that the code was generated by Kotlin; and Kotlin
+can impose its more discerning worldview upon the JVM without incurring large
+runtime costs.
+
+### Scoring Kotlin
+
+Given that Kotlin was specifically designed with the intention of being
+forward and backward compatible with Java, it is no surprise that it checks
+most of my boxes:
+
+
+Feature               | Score | Explanation
+----------------------|-------|---------------
+POJOs                 | 1     | Kotlin has this
+Null Safety           | 1     | Kotlin has this
+Immutable Collections | 0.5   | Kotlin has read-only and writable interfaces over `java.util.*` collections, but this is not quite what I want. I'd rather have bona-fide immutable collections. There's a proposal for this but it's not in production.
+Interop               | 1     | Kotlin's interop is superb and one need never know that Kotlin generated the code
+Performance           | 1     | Kotlin's performance is in line with that of Java
+Learning Curve        | 1     | Kotlin has the most modest learning curve of any JVM language after Java
+No Language lock-in   | 1     | Lock in is minimal with Kotlin, due to its compatibility
+Few Esoteric Features | 1     | Kotlin has a few optional features, but all are present in C#
+Total                 | 7.5   | No doubt due to Kotlin's intense focus on being a Java successor, it manages to scratch nearly every itch without having any major pitfalls.
 
 ## Scoring Java replacements
 
@@ -305,9 +323,9 @@ Immutable Collections | 1       | 1     | 0.5    | 0
 Interop               | 0       | 0     | 1      | 1
 Performance           | 0       | 0.5   | 1      | 1
 Learning Curve        | 0       | 0     | 1      | 1
-Language lock-in      | 0       | 1     | 0      | 1
+No Language lock-in   | 0       | 0.5   | 1      | 1
 Few Esoteric Features | 1       | 0     | 1      | 1
-Total                 | 2       | 4     | 6.5    | 5
+Total                 | 2       | 3.5   | 7.5    | 5
 
 There's a couple of reminders here:
 
@@ -343,8 +361,10 @@ length of time.
 * [Official Kotlin documentation](http://kotlinlang.org/)
 * [Kotlin &ldquo;Koans&rdquo;](https://try.kotlinlang.org)
 * [Steve Yegge on Kotlin](http://steve-yegge.blogspot.com/2017/05/why-kotlin-is-better-than-whatever-dumb.html)
+* [JetBrains' debut blog post about Kotlin](https://blog.jetbrains.com/kotlin/2011/08/why-jetbrains-needs-kotlin/)
 * Scala rant by Paul Phillips, Scala contributor, against Scala's idiosyncrasies:
   {{< youtube uiJycy6dFSQ >}}
+* [Scala - the good, the bad, and the very ugly.](https://www.slideshare.net/Bozho/scala-the-good-the-bad-and-the-very-ugly). A similar slide deck documenting Scala's implicit warts.
 * [Calling Kotlin generics from Java looks fluent](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html#variant-generics)
 * [Calling Scala generics from Java requires tortuous casting and reflection](https://stackoverflow.com/questions/30789580/call-scala-generic-method-from-java)
 * [Scala, Kotlin, and Clojure null handling](https://blog.scalac.io/2015/05/31/dealing-with-npe.html)
