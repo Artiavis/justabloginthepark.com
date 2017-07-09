@@ -3,7 +3,6 @@ date = "2017-06-18T13:12:46-04:00"
 description = "Wherein I discuss some of the interesting aspects of how Clojure achieves its namespace concepts, which are (to a large extent) a figment of the compiler's imagination."
 tags = ["programming", "clojure"]
 title = "Clojure and the Esoteric Mysteries of Namespaces"
-draft = true
 +++
 
 If you've ever been programming in Clojure and encountered an error which looks
