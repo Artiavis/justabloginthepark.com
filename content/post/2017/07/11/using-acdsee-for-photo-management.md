@@ -235,20 +235,98 @@ or as a more photography-centric (and lightweight) competitor to PSE.
 It has a similar concept as Lightroom in that it can easily import photos into its
 catalog (index) for processing and tagging (no facial recognition though).
 And it has a fully-fleshed-out photography workflow with both non-destructive RAW
-processing and JPG editing.
+processing and JPG editing. Its sticker price is $100, which is a little
+high considering that it's gunning against the well-known PhotoShop Elements
+which is "only" $80. However, it's on sale this week for $50, which I consider to
+be a fantastic price for what it offers.
+
+### Manage Mode
 
 The "Manage" workflow of the app is an intelligent, photo-centric file browser.
 Although this may not sound so powerful at first blush, the ability to combine
 a local index of tags and categories with typical file browsing and a global file
 cache ends up being far more fluid than it sounds at first blush.
 
-![ACDSee Pro Manage Screen grid shows fluidity in file browsing](/img/acdsee_pro_manage_screen.png)
+{{< figure src="/img/acdsee_pro_manage_screen.png"
+           alt="ACDSee Pro Manage Screen grid shows fluidity in file browsing"
+           caption="The ACDSee Manage mode is incredibly fluid for deft maneuvers around the photo catalogue."
+>}}
+
+This mode is almost completely analogous to [Adobe Bridge](https://www.adobe.com/products/bridge.html)
+in its file-browser centrality. However, Bridge is (especially) meant to be a
+graphic designer's workhorse for punting files between programs like InDesign,
+Premier, Illustrator, in addition to PhotoShop. As a dedicated program, ACDSee Pro
+is more specialized for photography workflows *because* it is a single program.
+(There's a stripped down version of "ACDSee Pro" titled "ACDSee", which is much
+closer to Bridge in that it does not have powerful editing built in.)
+
+ACDSee has another similarity to Bridge &ndash; all assets which have been examined
+in the program are transparently and automatically indexed; but a user can batch import
+entire drives into the database through a setup/settings option. This feature allows
+one to set up all initial photos and have any subsequently taken ones get imported
+on-the-fly. (A potential hiccup is that if photos are moved around outside of the
+program, the existing references become orphaned and data can be lost.)
+
+A workflow I very much like from ACDSee (which I assume Bridge and Lightroom also have)
+is the ability to work with photos quickly from the moment a camera is plugged in
+until the photos are ready for "shipping" to the internet or a printer. My workflow
+looks like:
+
+1. Plug in the camera and import from it
+2. Filter by date and select desired photos to import
+3. Copy them to a *staging* folder. Add desired photos to the "image basket" (shopping cart)
+   and move them to a *working* folder. The staging photos which are no
+   longer desirable can be kept or purged.
+4. Do any editing upon the photos in the *working* folder and then copy them to a
+   *destination*/*output* folder.
+5. Optionally, upload the photos to Flicker/FaceBook/SmugMug/Zenfolio or copy
+   to a network drive.
+
+### Photo Mode
 
 Like most other organizer/editors, it supports a primitive timeline and map view
 (although its map view is more limited than most of the competition), not shown.
-What I was really impressed with is how good its photo editing is, for the price.
+I'm not really sure what to say about this timeline viewing mode, otherwise. It's
+hard to jump from it into other modes in a "powerful" way, other than right clicking
+on a single photo at a time. I think it's nice to have but isn't nearly as powerful
+as the other modes.
 
-![ACDSee Pro RAW file development of high dynamic range sunset photo](/img/acdsee_pro_develop_mode.png)
+{{< figure src="/img/acdsee_pro_photo_mode.png"
+           alt="ACDSee Pro Photo mode"
+           caption="Although I find the Photo mode visually attractive, it's not really meant for productivity work."
+>}}
+
+### Develop and Edit Modes
+
+These should be self-explanatory to anyone who has ever used Lightroom, but I'll
+go over this nonetheless. "Develop" mode is (especially but not exclusively) for
+image-wide tweaks to properties like white balance, saturation, etc., in other
+words, holistic tweaks. Develop mode is of particular interest for developers
+shooting in RAW because most (all?) of the tweaks in Develop mode can be done
+to RAW files without having to leave the RAW image (which sacrifices some level
+of image detail by definition).
+
+{{< figure src="/img/acdsee_pro_develop_mode.png" 
+           alt="ACDSee Pro RAW file development of high dynamic range sunset photo"
+           caption="Develop mode is useful for 85% of photo processing a typical photographer does, in this case boosting dynamic range." >}}
+
+For most photos, I maybe want to do some cropping and noise reduction, followed
+by tweaking some colors and exposure and lighting; Develop mode is ideal for this.
+I especially like the Light EQ mode, which has intelligent sliders for continuously
+adjusting between the original photo and more dynamic versions of it.
+
+I've poked at Edit mode, which is useful for local editing (the "Ultimate" version
+of the program also has layers but those aren't so useful to photographers).
+For good photography, it shouldn't be necessary to lean heavily upon local editing
+of photos for every single photo. That being said, local edits are a good way of
+making the image "pop", using techniques such as
+[dodging and burning](https://en.wikipedia.org/wiki/Dodging_and_burning).
+
+{{< figure src="/img/acdsee_pro_edit_mode.png"
+           alt="Burning with Edit mode in ACDSee Pro"
+           caption="Using the burn tool in Edit mode in ACDSee Pro.">}}
+
+## Why I Chose ACDSee Pro
 
 The photo editing provides non-destructive RAW editing and a very intelligent set
 of lighting and level sliders. Furthermore, there's included a basic facility for
