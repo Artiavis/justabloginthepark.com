@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+<a href="https://amazon.com/dp/{{ .Get "asin" }}">{{ .Get "text" }}</a>
+{{ else }}
+<a href="https://amazon.com/dp/{{ .Get 0 }}">{{ .Get 1 }}</a>
+{{ end }}
