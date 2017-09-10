@@ -63,6 +63,11 @@ The RX series is one of the most outstanding high-end point-and-shoot cameras ou
 there. The aperture can result in some outstanding portraits and its zoom makes
 it surprisingly versatile as an ultra-portable portrait camera.
 
+{{< figure src="/img/2017/08/13/sony-rx-100-mark-iii.png"
+           alt="Sony RX 100 Mark 3"
+           caption=""
+>}}
+
 However, in the store, I wasn't thoroughly impressed with the photos that I was
 seeing on the LCD. (I know, the LCD displays aren't always the best, but short
 of taking the camera home, that's all I had to go by.)
@@ -76,6 +81,11 @@ and weight are very similar to the Sony, but with far more flexible aperture
 than the Sony (as well as a much more svelte interface and in-hand feel).
 I found the pictures it took to be quite pleasant, and definitely would recommend
 this to friends. However, I passed in favor of a Fuji.
+
+{{< figure src="/img/2017/08/13/ricoh-gr-ii.png"
+           alt="Ricoh GR Mark 2"
+           caption=""
+>}}
 
 ## Fuji X70 and X100T
 
