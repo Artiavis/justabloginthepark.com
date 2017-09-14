@@ -1,3 +1,5 @@
 themes/
 public/
 .vscode/
+*.sublime-project
+*.sublime-workspace

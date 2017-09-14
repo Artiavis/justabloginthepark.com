@@ -2,9 +2,10 @@
 title = "XCOM2: Review"
 tags = ["video-games"]
 date = "2017-03-19"
+hljs = false
 +++
 
-Over the holidays I picked up the iPad version of 
+Over the holidays I picked up the iPad version of
 [XCOM: Enemy Within](https://en.wikipedia.org/wiki/XCOM:_Enemy_Within),
 the previous iteration in the XCOM franchise. For those unfamiliar with XCOM,
 it's a brilliant (but extremely challenging) series of turn-based tiled-map
@@ -18,13 +19,13 @@ friends and family. After having just beaten the game, here are my thoughts.
 ## Story
 
 For those unfamiliar with the XCOM series, the story in a nutshell is,
-&ldquo;A motley assortment of aliens have invaded/occupied Earth using 
+&ldquo;A motley assortment of aliens have invaded/occupied Earth using
 superior weapons, armor, technology, and telekinetic powers, and over the course
 of a calendar year you fight back, turn their advantages into your advantages,
 and repel the alien menace.&rdquo; That being said, the story begun in previous
 games gets deliciously continued in this part of the franchise. Without spoiling
 anything, the story here is compelling through the first play through. (Once
-a full play through is accomplished, the replay value evolves to be more about 
+a full play through is accomplished, the replay value evolves to be more about
 the tactics and strategy and never messing up, rather than the story.)
 
 ## Learning Curve

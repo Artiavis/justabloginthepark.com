@@ -5,10 +5,12 @@
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/{{ .Site.Params.fa_version }}/css/font-awesome.min.css">
-{{ with .Site.Params.highlight.style }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hljs_version }}/styles/{{ . }}.min.css">
-{{ else }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hljs_version }}/styles/default.min.css">
+{{ if ( index .Params "hljs" | default true ) }}
+    {{ with .Site.Params.highlight.style }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hljs_version }}/styles/{{ . }}.min.css">
+    {{ else }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hljs_version }}/styles/default.min.css">
+    {{ end }}
 {{ end }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/dracula.min.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/images.min.css">

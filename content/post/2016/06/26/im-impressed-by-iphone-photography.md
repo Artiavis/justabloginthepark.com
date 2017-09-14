@@ -2,6 +2,7 @@
 title = "I'm Impressed by iPhone Photography"
 tags = ["photography"]
 date = "2016-06-26"
+hljs = false
 +++
 
 My wife and I got back from our honeymoon in Italy a few weeks ago

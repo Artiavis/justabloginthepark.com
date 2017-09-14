@@ -2,6 +2,7 @@
 title = "Comparing Freemium Game Models"
 tags = ["video-games", "economics"]
 date = "2016-01-10"
+hljs = false
 +++
 
 
@@ -82,7 +83,7 @@ Here's the classic example for Clash of Clans:
   their territories plundered (for free); they can only attempt to keep
   up by attacking opponents dozens of times a day.
 - At this high level of play, it's infeasible to even maintain status
-  through frequent attacks. 
+  through frequent attacks.
 - It becomes necessary to use cash infusions to
   accelerate army training time, resource production, and to immunize
   territories from attack.
@@ -121,7 +122,7 @@ things about it. It's nice that it's never truly pay-to-win &ndash; it is
 technically possible to compete in pro circuits as a free player, and some
 players do pull it off.
 However, players are incentivized to pay (at least
-somewhat) in order to keep up with the changes. Game producers can put 
+somewhat) in order to keep up with the changes. Game producers can put
 even more pressure
 on free players by constantly and rapidly releasing new content, making it difficult for free players to keep up.
 

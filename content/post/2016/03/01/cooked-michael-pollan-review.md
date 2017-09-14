@@ -2,9 +2,10 @@
 title = "Cooked"
 tags = ["tv"]
 date = "2016-03-01"
+hljs = false
 +++
 
-Those who know me know I have a strong interest in cooking shows. 
+Those who know me know I have a strong interest in cooking shows.
 I am a huge fan of *Iron Chef* and Alton Brown's *Good Eats*
 (so much so that I actually own all three volumes of the *Good Eats* cookbooks!).
 Although I haven't watched much in the way of cooking shows in recent years due

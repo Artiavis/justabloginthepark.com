@@ -3,12 +3,16 @@
     <p>{{ .Site.Copyright | safeHTML }}</p>
   </div>
 </section>
-{{ $hljs_version := .Site.Params.hljs_version }}
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $hljs_version }}/highlight.min.js"></script>
-{{ range .Site.Params.highlight.languages }}
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $hljs_version }}/languages/{{ . }}.min.js"></script>
+
+{{ if ( index .Params "hljs" | default true ) }}
+    {{ $hljs_version := .Site.Params.hljs_version }}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $hljs_version }}/highlight.min.js"></script>
+    {{ range .Site.Params.highlight.languages }}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $hljs_version }}/languages/{{ . }}.min.js"></script>
+    {{ end }}
+    <script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
-<script>hljs.initHighlightingOnLoad();</script>
+
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}

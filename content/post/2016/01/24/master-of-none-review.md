@@ -2,9 +2,10 @@
 title = "Master of None"
 tags = ["tv"]
 date = "2016-01-24"
+hljs = false
 +++
 
-My wife and I finally finished 
+My wife and I finally finished
 [Aziz Ansari's](https://en.wikipedia.org/wiki/Aziz_Ansari)
 [&ldquo;Master of None&rdquo;](http://www.imdb.com/title/tt4635276/),
 the social commentary comedy about the challenges of coming of (older) age

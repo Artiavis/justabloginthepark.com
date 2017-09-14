@@ -3,6 +3,7 @@ date = "2017-07-11T20:42:10-04:00"
 description = "Wherein I learn about the difference between photo organizers and photo editors, and choose a program which is capable for both tasks."
 tags = ["photography"]
 title = "Using ACDsee for Photography"
+hljs = false
 +++
 
 For the past few years, I've been interested in a more powerful digital photography
@@ -58,7 +59,7 @@ database.)
 ## Photo Processing
 
 Photo processing involves potentially destructive changes to digital photograph files
-to alter their appearance in aesthetically pleasing ways. This runs the gamut 
+to alter their appearance in aesthetically pleasing ways. This runs the gamut
 from minor geometric tweaks to altering the perspective and colors of a photo
 to remove optical distortion and optical illusions. To enumerate some informal
 tiers of photo processing capabilities:
@@ -105,7 +106,7 @@ tiers of photo processing capabilities:
    own RAW format; or else a third party must provide RAW processing for many
    different RAW formats. A common reason to shoot photographs in the RAW format
    is to recover [dynamic range](https://en.wikipedia.org/wiki/Dynamic_range) for an image with mixed lighting.[^dr]
-   
+
 
 [^dr]: Humans have sixteen *stops* of dynamic range within their eyes, but cameras generally only have six stops. When a camera must record its image, it must choose where to allocate its range of exposure. With a RAW file, however, a photographer can selectively force the highlights of an image to be darker and the shadows to be lighter, revealing "hidden" information that a camera ordinarily could not use.
 
@@ -306,7 +307,7 @@ shooting in RAW because most (all?) of the tweaks in Develop mode can be done
 to RAW files without having to leave the RAW image (which sacrifices some level
 of image detail by definition).
 
-{{< figure src="/img/acdsee_pro_develop_mode.png" 
+{{< figure src="/img/acdsee_pro_develop_mode.png"
            alt="ACDSee Pro RAW file development of high dynamic range sunset photo"
            caption="Develop mode is useful for 85% of photo processing a typical photographer does, in this case boosting dynamic range." >}}
 

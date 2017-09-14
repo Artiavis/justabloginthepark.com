@@ -3,7 +3,7 @@ date = "2017-06-04T14:30:28-04:00"
 description = "My highly subjective review of the Overwatch video game."
 tags = ["video-games"]
 title = "Review: Overwatch"
-draft = false
+hljs = false
 +++
 
 Around February, a friend told me that the extremely popular (and award-winning)
@@ -74,7 +74,7 @@ Some of the characters can be a little hard to play correctly:
 * [Symmetra](http://overwatch.gamepedia.com/Symmetra) has turrets and a teleporter
   machine for an ultimate, but she's easily countered and she's close to useless
   on attack.
-* [Roadhog](http://overwatch.gamepedia.com/Roadhog) can one-shot any non-buffed non-tank 
+* [Roadhog](http://overwatch.gamepedia.com/Roadhog) can one-shot any non-buffed non-tank
   when he lands his hook combos; but when he misses his hook, he's easy and safe
   to focus fire.
 
@@ -101,7 +101,7 @@ system:
 
 * Every match yields "experience", culminating in "leveling up" your game account,
   and which rewards your profile with a loot box
-* Loot boxes contain cosmetic upgrades (of varying degrees of rarity) for 
+* Loot boxes contain cosmetic upgrades (of varying degrees of rarity) for
   individual characters, with some options being seasonal or promotional unlocks,
   including the most coveted of the cosmetic upgrades:
   * New skins/themes (which can also change combat animations and are visible

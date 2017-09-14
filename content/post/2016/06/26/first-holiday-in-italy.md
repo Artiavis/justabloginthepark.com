@@ -2,6 +2,7 @@
 title = "My First Holiday in Italy"
 tags = ["travel", "vacation"]
 date = "2016-06-26"
+hljs = false
 +++
 
 

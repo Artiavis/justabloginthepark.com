@@ -3,11 +3,12 @@ date = "2017-08-13T21:43:09-04:00"
 description = "Wherein I describe my purchase of the Fujifilm X100T camera and my feelings about it after using it for some weeks."
 tags = ["photography"]
 title = "Fuji X100T"
+hljs = false
 +++
 
-On July 4th, I jetted over to [B&H](//www.bhphotovideo.com/) to pick up a new(ly used) camera. 
-I walked out with a 
-[Fujifilm X100T](//www.fujifilm.com/products/digital_cameras/x/fujifilm_x100t/) 
+On July 4th, I jetted over to [B&H](//www.bhphotovideo.com/) to pick up a new(ly used) camera.
+I walked out with a
+[Fujifilm X100T](//www.fujifilm.com/products/digital_cameras/x/fujifilm_x100t/)
 mirrorless point-and-shoot camera. This is the
 story of how I chose that camera, and how I feel about it a few weeks later.
 
@@ -18,10 +19,11 @@ story of how I chose that camera, and how I feel about it a few weeks later.
 with me staying up until 4 o'clock in the morning one Saturday night. What had
 begun as an innocent review of my family photos perversely devolved into a
 compulsive episode of researching cameras with which to upgrade said family
-photos.
+photos. Those family photos were recorded almost exclusively with the iPhone 5s
+and iPhone 6; yet, once printed, the quality left quite a bit to be desired.
 
 Long story short, I resolved to look at cameras which could fundamentally be used
-as drop-in replacements for smartphone cameras; cameras which are portable, light,
+as drop-in replacements for my smartphone camera; cameras which are portable, light,
 fast, usable by lay-people, but yet which produce better results than even the
 best modern smartphone cameras. Part of my motivation is that I don't want to pay
 for an entry level point-and-shoot camera which is inferior to a smartphone camera
@@ -215,7 +217,7 @@ images produced by full-frame cameras, they can definitely hold their own.
 
 This camera has a nice feature which does not exist on DSLR's, called
 "contrast peaking", a nifty technique wherein the camera takes the digital image
-and superimposes bold-colored lines upon a B&W cropped foreground preview 
+and superimposes bold-colored lines upon a B&W cropped foreground preview
 for the contours of objects which are
 estimated to be in focus by the camera sensor.
 Although this sometimes breaks down in poor lighting, the utility is extremely
@@ -281,7 +283,7 @@ buttons, some of which are more necessary than others:
 * Although I haven't gotten much use out of it, I've assigned the neutral density
   filter to the arrow down button.
 * There's a WiFi server built into this camera. I've left it at its default location.
-  It's nice to have but is a bit sluggish to initialize from a smartphone, 
+  It's nice to have but is a bit sluggish to initialize from a smartphone,
   and having it be quickly accessible ameliorates the issue.
 
 ### AF hunting
