@@ -32,7 +32,7 @@ verboseLog = true
 
   [params.highlight]
   # style = "github"
-  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "kotlin", "javascript", "ini", 
+  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "kotlin", "javascript", "ini",
                "java", "json", "markdown", "python", "ruby", "scala", "sql", "tex"]
 
   [[params.social]]
