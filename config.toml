@@ -9,7 +9,7 @@ defaultLayout = "post"
 
 paginate = 5
 theme = "hemingway"
-googleAnalytics = "UA-45496110-1"
+# googleAnalytics = "UA-45496110-1"
 disqusShortname = "justabloginthepark"
 verbose = true
 verboseLog = true
