@@ -1,0 +1,17 @@
+{{ if .IsNamedParams }}
+<div class="embed video-player">
+    <iframe class="youtube-player" type="text/html" 
+            width="640" height="385" 
+            src="http://www.youtube.com/embed/{{ .Get "id" }}{{with .Get "startAt" }}?start={{.}}{{ end }}" 
+            allowfullscreen frameborder="0">
+    </iframe>
+</div>
+{{ else }}
+<div class="embed video-player">
+    <iframe class="youtube-player" type="text/html" 
+            width="640" height="385" 
+            src="http://www.youtube.com/embed/{{ .Get 0 }}" 
+            allowfullscreen frameborder="0">
+    </iframe>
+</div>
+{{ end }}
