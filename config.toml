@@ -51,9 +51,9 @@ verboseLog = true
   url = "https://linkedin.com/in/JeffreyCRabinowitz"
   fa_icon = "fa-linkedin"
 
-  # [[params.social]]
-  # url = "https://www.dropbox.com/s/wttiymi3kkxdxww/jeff_rabinowitz_resume_2016_05_26.pdf?dl=1"
-  # fa_icon = "fa-file-pdf-o"
+  [[params.social]]
+  url = "https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"
+  fa_icon = "fa-file-pdf-o"
 
   [[params.social]]
   url = "/index.xml"
