@@ -2,7 +2,7 @@
 title = "Review: Java Concurrency in Practice"
 date = "2018-03-17T23:50:00-04:00"
 description = ""
-tags = ["java", "programming", "software-engineering"]
+tags = ["java", "programming", "software-engineering", "concurrency"]
 +++
 
 I was recently assigned to a new project at work, which requires some concurrent

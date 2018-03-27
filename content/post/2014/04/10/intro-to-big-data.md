@@ -1,7 +1,7 @@
 +++
 title = "Intro to Big Data"
 date = "2014-04-10"
-tags = ["big-date"]
+tags = ["big-data"]
 +++
 
 Last Friday, I had the chance to attend a panel of career technologists and data scientists who all work in the

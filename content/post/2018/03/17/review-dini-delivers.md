@@ -3,6 +3,7 @@ title = "Review: Dini Delivers"
 date = "2018-03-17T20:10:18-04:00"
 description = "In which Jeff tried out a weekly meal-prep scheme and contemplates the experience."
 tags = ["cooking"]
+hljs = false
 +++
 
 Lately, both my wife and I have been working long
