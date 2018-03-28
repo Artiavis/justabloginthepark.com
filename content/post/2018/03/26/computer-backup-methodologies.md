@@ -1,10 +1,9 @@
 +++
 title = "Computer Backup Methodologies"
-date = "2018-03-26T22:58:22-04:00"
+date = "2018-03-27T22:58:22-04:00"
 description = "In which Jeff discusses what he considers to be the three primary ways of backing up computers/data."
 tags = ["computers", "technology", "tech-support"]
 hljs = false
-draft = true
 +++
 
 I was chatting with my dad the other day, and the topic of backing up computers
@@ -159,6 +158,87 @@ the required technology to someone else.
 
 ## Option 3: Cloud file backups
 
+Cloud backup solutions like [Dropbox](http://dropbox.com/)
+and [Google Drive](http://drive.google.com/)
+are great options for folks who mostly consider computers fancy ways of editing
+Word files or Excel spreadsheets. Typical office files don't occupy much disk
+space and consequently computer users who don't need much else to be saved can
+get away with free or cheap tiers with the various providers of file backups.
+
+
+{{< figure src="/img/2018/03/26/dropbox-app-open-on-ipad.jpg"
+           alt="I store copies of my resume and other precious documents on my iPad, for both backup purposes and easy access on the move."
+           caption="I store copies of my resume and other precious documents on my iPad, for both backup purposes and easy access on the move."
+>}}
+
+As explained above, storing files in "the cloud" avoids the thorny issues relating
+to buying and maintaining your own computer hardware and backups, while still giving
+peace of mind and flexibility.
+
+Firms like Dropbox, Google, and Microsoft (but importantly not Apple, at least not in the way the other firms do) typically provide
+an "app" which runs on the computer in the background and silently mirrors all the
+files on your local computer to the cloud, and vice versa.
+Once in the cloud, your files can be accessed from desktops, laptops, tablets,
+and phones, as long as you have an internet connection. That flexibility can be
+invaluable to students and other academic or white collar professionals who need
+to access and update documents on the go. Having all your files at your fingertips
+over the internet takes the concept of cloud system backups, and takes it to the
+extreme, making your files mobile. On the other hand, you generally leave your
+computer behind; you don't get backups of your apps, settings, and have limited
+space for backups of photos[^photo] and videos[^video].
+
+The cost model for cloud file backup solutions tends to have a moderately sized
+free tier, which should service most folks who use them for backing up only
+important documents; professionals, academics, or folks who feel they want to
+back up everything may have to pay more, sometimes a lot more.
+Summarizing [Dropbox's individual pricing plans](https://www.dropbox.com/individual/plans-comparison),
+[Google Drive's pricing plans](https://www.google.com/drive/pricing/),
+and [Microsoft OneDrive's pricing plans](https://onedrive.live.com/about/en-US/plans/)
+yields the following prices for access in the US (where 1TB = 1,000GB):
+
+Price Plan | Dropbox | Google[^gpricnig] | Apple[^apricing] | Microsoft
+-----------|---------|-------------------|------------------|----------------
+Free       | 2GB     | 15GB              | 5GB              | 5GB 
+$12/year   | -       | -                 | 50GB             | -
+$20/year   | -       | 100GB             | -                | -   
+$24/year   | -       | -                 | -                | 50GB
+$36/year   | -       | -                 | 200GB            | -
+$70/year   | -       | -                 | -                | 1TB, Microsoft Office included
+$100/year  | 1TB     | 1TB               | -                | 1TB and Microsoft Office for each of 5 people
+$120/year  | -       | -                 | 2TB              | -
+
+[^apricing]: Billed monthly only, so no discount for annualizing.
+[^gpricnig]: Google is vaguely in competition with Microsoft, trying to push their Google Office applications which compete with Microsoft's world renowned office suite, but has some attractive offerings of their own, like unlimited free photo backup (for consumer cameras and smartphone cameras).
+
+On paper, more is better, and it would seem like Microsoft or Google have more
+cost-effective plans, especially at cheaper price points.
+However, only Dropbox is really trying to support the true mobile file experience.
+Google is trying to push their internet-based Office apps, which require storing
+the files in the cloud; they also throw in free photo storage for most folks.
+Apple makes it easy to go all-in on their subscriptions but isn't as flexible as
+the other companies, in that they deliberately make it harder to use other services 
+in their quest to make it easier to use their own. Microsoft is mostly
+competing with Apple and Google at the same time, and throws in an Office subscription
+as a teaser to lure customers away from Apple and Google's attractive, and very sticky,
+ecosystems.
+
+For students, using one (or all) of these options
+is a perfectly reasonable choice (and actually one such cloud may be provided
+or required by the school). For other people who expect to use more files,
+the following considerations may help:
+
+* If your home computer is an Apple computer and you would rather back up files
+  than your computer as a whole, or if you enjoy the concept of cloud sharing of
+  files between an iPhone/iPad/MacBook/iMac, then iCloud can be appealing (as it's
+  easier to use iCloud on phones and tablets than the competition). However,
+  the other options may be more apealing.
+* If you're a student who just wants basic office functionality, or someone who
+  really just wants infinite backups of their photos, Google's offerings right
+  now are especially compelling.
+* If your only concern is backing up your Word/Excel/PowerPoint documents, then
+  using Microsoft's out-of-the-box approach with its discounted/free Office
+  subscription included is probably the most compelling.
+* Otherwise, I'd just go with Dropbox (perhaps in combination with the others).
 
 ## Summary
 
@@ -185,7 +265,7 @@ for those with large photo/video collections, who need to keep files handy. Othe
 cloud backups tend to be more economical in terms of both time saved, and optimizing
 for various price points.
 
-[^photo]: For the sake of argument, I include a discussion of how effective these solutions are at backing up photo libraries. However, it's true that increasingly many people rely upon "free" (as of the time of this writing) cloud backup/management solutions like [Amazon Prime Photos](https://www.amazon.com/Cloud-Drive-Storage/b?node=13234696011) or [Google Photos](https://photos.google.com/). For those who eschew the "free" solutions, or who have large personal catalogs that they enjoy working with locally, including this section is still cogent.
+[^photo]: For the sake of argument, I include a discussion of how effective cloud file backup solutions are at backing up photo libraries. However, it's true that increasingly many people rely upon "free" (as of the time of this writing) cloud backup/management solutions like [Amazon Prime Photos](https://www.amazon.com/Cloud-Drive-Storage/b?node=13234696011) or [Google Photos](https://photos.google.com/). For those who eschew the "free" solutions, or who have large personal catalogs that they enjoy working with locally, including this section is still cogent.
 [^video]: Video files are so large that it's actually not a good idea to store them in any of these options; that being said, if you insist on doing so, which of these options are the best.
 [^cloud-file-plans]: There's quite a bit of competition in this space, which means that there tends to be a variety of price points and free-tiers for thrifty shoppers. Companies like Google, Apple, Dropbox, Microsoft, Amazon, and others all compete in the fairly crowded file-cloud solution space. In fact, I remember that when I was in university, the standard wisdom was for all the students to open up trial with each; in the end, everybody seemed to have something like 10-20GB of free file storage, which is plenty for most students.
 

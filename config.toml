@@ -27,8 +27,8 @@ verboseLog = true
   Title = "Just a Blog in the Park"
   # sharingicons = false
   disable_sri = true
-  hljs_version = "9.11.0"
-  fa_version = "4.7.0"
+  hljs_version = "9.12.0"
+  fa_version = "5.0.9"
 
   [params.highlight]
   # style = "github"
@@ -37,24 +37,30 @@ verboseLog = true
 
   [[params.social]]
   url = "/about"
-  fa_icon = "fa-user-circle-o"
+  fa_prefix = "fas"
+  fa_icon = "fa-user-circle"
 
   [[params.social]]
   url = "/tags"
+  fa_prefix = "fas"
   fa_icon = "fa-tags"
 
   [[params.social]]
   url = "https://github.com/Artiavis"
+  fa_prefix = "fab"
   fa_icon = "fa-github"
 
   [[params.social]]
   url = "https://linkedin.com/in/JeffreyCRabinowitz"
+  fa_prefix = "fab"
   fa_icon = "fa-linkedin"
 
   [[params.social]]
   url = "https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"
-  fa_icon = "fa-file-pdf-o"
+  fa_prefix = "fas"
+  fa_icon = "fa-file-pdf"
 
   [[params.social]]
   url = "/index.xml"
-  fa_icon = "fa-rss"
+  fa_prefix = "fas"
+  fa_icon = "fa-rss-square"
