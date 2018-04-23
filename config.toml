@@ -36,9 +36,9 @@ verboseLog = true
                "java", "json", "markdown", "python", "ruby", "scala", "sql", "tex"]
 
   [[params.social]]
-  url = "/about"
+  url = "/photos"
   fa_prefix = "fas"
-  fa_icon = "fa-user-circle"
+  fa_icon = "fa-camera"
 
   [[params.social]]
   url = "/tags"

@@ -13,6 +13,8 @@
     {{ else }}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hljs_version }}/styles/default.min.css">
     {{ end }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vs2015.min.css">
 {{ end }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vs2015.min.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/images.min.css">
+{{ if ( index .Params "defaultcss" | default true ) }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/images.min.css">
+{{ end }}

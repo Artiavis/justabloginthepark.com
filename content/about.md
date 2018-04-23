@@ -1,6 +1,7 @@
 +++
 title = "About Me"
 date = "2017-01-01"
+hljs = false
 +++
 
 ## About Me
