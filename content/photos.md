@@ -7,6 +7,12 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/Snoozing-on-a-rainy-day.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="Snoozing on a rainy day.">}}
+  {{< pswp-figure link="/img/gallery/Haleakala-Sunrise.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="Haleakalā Sunrise">}}
   {{< pswp-figure link="/img/gallery/Rolen-Bagels-Lox-Sandwich.JPG" thumb="-thumb"
                   size="2160x1440"
                   caption="Lunch at Rolen's Bagels."
