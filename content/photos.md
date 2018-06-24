@@ -1,12 +1,15 @@
 +++
 title = "My Photo Gallery"
-date = "2018-04-22"
+date = "2018-06-22"
 hljs = false
 defaultcss = false
 +++
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/Bryant-Park-Fountain.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="Chilling at night beside the Bryant Park fountain." >}}
   {{< pswp-figure link="/img/gallery/Snoozing-on-a-rainy-day.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="Snoozing on a rainy day.">}}
