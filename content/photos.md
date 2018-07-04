@@ -7,6 +7,13 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/just-passin-thru.jpg" thumb="-thumb"
+                  size="1440x1440"
+                  caption="Just passing through" >}}
+  {{< pswp-figure link="/img/gallery/buses-only.jpg" thumb="-thumb"
+                  size="2164x1440" >}}
+  {{< pswp-figure link="/img/gallery/the-daylight-thinker.jpg" thumb="-thumb"
+                  size="1440x1440" >}}
   {{< pswp-figure link="/img/gallery/Bryant-Park-Fountain.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="Chilling at night beside the Bryant Park fountain." >}}
@@ -41,6 +48,12 @@ defaultcss = false
   {{< pswp-figure link="/img/gallery/Urban-Carriages.jpg" thumb="-thumb"
                   size="2160x1440"
                   alt="Urban carriages">}}
+  {{< pswp-figure link="/img/gallery/morning-commute-from-grand-central.jpg" thumb="-thumb" 
+                  size="1920x1440"
+                  alt="Fifth Ave and 42nd Street at dawn in the winter." >}}
+  {{< pswp-figure link="/img/gallery/spuyten-duyvil-bridge-winter-hdr.jpg" thumb="-thumb"
+                  size="1920x1440"
+                  alt="Spuyten Duyvil on a frosty morning." >}}
   {{< pswp-figure link="/img/gallery/The-Price-is-Listed-Here.jpg" thumb="-thumb"
                   size="2160x1440"
                   alt="The price is listed here">}}

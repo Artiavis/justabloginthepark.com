@@ -1,5 +1,5 @@
 +++
-title = "Fuji LH X100 Len Hood"
+title = "Fuji LH X100 lens hood"
 date = "2018-05-22T21:59:35-04:00"
 description = "In which Jeff reviews his experience with Fujifilm's official lens hood for the X100 camera series."
 tags = ["photography"]

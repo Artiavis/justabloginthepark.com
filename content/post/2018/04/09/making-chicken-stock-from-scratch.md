@@ -1,5 +1,5 @@
 +++
-title = "Making Chicken Stock From Scratch"
+title = "Making chicken stock from scratch"
 date = "2018-04-09T19:07:51-04:00"
 description = "In which Jeff attempts to make chicken stock from scratch."
 tags = ["cooking"]

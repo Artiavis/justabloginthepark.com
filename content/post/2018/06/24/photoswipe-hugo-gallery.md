@@ -1,5 +1,5 @@
 +++
-title = "Photoswipe Hugo Gallery"
+title = "Photoswipe Hugo gallery"
 date = "2018-06-24T18:22:04-04:00"
 description = "Using Photoswipe.js for a lightbox photo gallery on Hugo."
 tags = []
