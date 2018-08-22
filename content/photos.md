@@ -7,6 +7,15 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/bountiful-sushi.jpg" thumb="-thumb"
+                  size="1822x1440"
+                  caption="Bountiful sushi" >}}
+  {{< pswp-figure link="/img/gallery/twilit-flower-daydream.jpg" thumb="-thumb"
+                  size="2164x1440"
+                  caption="Twilit flower daydream" >}}
+  {{< pswp-figure link="/img/gallery/checkmate-potboiler.jpg" thumb="-thumb"
+                  size="1440x1440"
+                  caption="Checkmate potboiler" >}}
   {{< pswp-figure link="/img/gallery/just-passin-thru.jpg" thumb="-thumb"
                   size="1440x1440"
                   caption="Just passing through" >}}
@@ -14,6 +23,9 @@ defaultcss = false
                   size="2164x1440" >}}
   {{< pswp-figure link="/img/gallery/the-daylight-thinker.jpg" thumb="-thumb"
                   size="1440x1440" >}}
+  {{< pswp-figure link="/img/gallery/red-shadow.jpg" thumb="-thumb"
+                  size="2164x1440"
+                  caption="Red Shadow">}}
   {{< pswp-figure link="/img/gallery/Bryant-Park-Fountain.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="Chilling at night beside the Bryant Park fountain." >}}
