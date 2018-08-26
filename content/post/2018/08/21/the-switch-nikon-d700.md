@@ -49,6 +49,11 @@ they aren't terribly improved at fundamental shooting.
 [in a review by Mattias Burling](https://www.youtube.com/watch?v=Cc3cAr5HkF8),
 as he seems to err towards more "hipster" cameras, at least on his video channel.)
 
+I really enjoyed shooting with this kit, and learned a lot. Some of my thoughts
+are below.
+
+Update: [I wrote about my experience using the flash separately here]({{< relref "learning-speedlights-with-nikon-sb900.md" >}})
+
 ## The experience
 
 The first thing I noticed, when I took this baby out for a drive, _was the weight_.

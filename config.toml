@@ -3,6 +3,7 @@ title = "Just a Blog in the Park"
 baseUrl = "http://justabloginthepark.com/"
 log = true
 copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2018"
+titleCaseStyle = "Chicago"
 # enableGitInfo = true
 
 defaultLayout = "post"
