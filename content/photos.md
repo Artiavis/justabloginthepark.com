@@ -7,6 +7,9 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/A-step-to-start-the-day.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="A step to start the day." >}}
   {{< pswp-figure link="/img/gallery/bountiful-sushi.jpg" thumb="-thumb"
                   size="1822x1440"
                   caption="Bountiful sushi" >}}
