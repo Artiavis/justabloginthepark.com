@@ -6,4 +6,4 @@ Get-ChildItem -Path '.\public' -Recurse -Exclude 'CNAME' |
     Remove-Item -Verbose
 
 # Regenerate site
-hugo.exe
+hugo.exe --minify

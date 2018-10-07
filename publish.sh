@@ -6,4 +6,4 @@ find public -type f -not -iwholename '*CNAME*' -not -iwholename '*.git*' -print 
 find public -type d -mindepth 1 -not -path '*.git*' -print -delete
 
 # Rebuild the site
-hugo
+hugo --minify
