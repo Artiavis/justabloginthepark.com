@@ -7,6 +7,24 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/midnight-blossoms.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="Midnight blossoms." >}}
+  {{< pswp-figure link="/img/gallery/holdin-up-traffic.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/budding-blossoms.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="Budding blossoms." >}}
+  {{< pswp-figure link="/img/gallery/off-duty.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/the-radiance.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/origami-swans-in-flight.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
   {{< pswp-figure link="/img/gallery/A-step-to-start-the-day.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="A step to start the day." >}}
