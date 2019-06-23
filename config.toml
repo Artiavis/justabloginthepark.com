@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Just a Blog in the Park"
-baseUrl = "www.justabloginthepark.com/"
+baseUrl = "https://www.justabloginthepark.com"
 log = true
 copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2019"
 titleCaseStyle = "Chicago"
