@@ -2,7 +2,7 @@ languageCode = "en-us"
 title = "Just a Blog in the Park"
 baseUrl = "http://justabloginthepark.com/"
 log = true
-copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2018"
+copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2019"
 titleCaseStyle = "Chicago"
 # enableGitInfo = true
 
@@ -56,7 +56,7 @@ verboseLog = true
   [params.highlight]
   # style = "github"
   languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "kotlin", "javascript", "ini",
-               "java", "json", "markdown", "python", "ruby", "scala", "sql", "tex"]
+               "java", "json", "markdown", "python", "ruby", "scala", "scheme", "sql", "tex"]
 
   [[params.social]]
   url = "/photos"
