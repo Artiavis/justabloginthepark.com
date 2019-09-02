@@ -7,6 +7,27 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/Espresso-maker.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Dina-XT30.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Charlie.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Rebbes-choice.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Pesach-Scallions.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Cops-on-the-Beat.jpg" thumb="-thumb"
+                  size="1440x1257"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/Sea-Lion.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
   {{< pswp-figure link="/img/gallery/midnight-blossoms.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="Midnight blossoms." >}}
