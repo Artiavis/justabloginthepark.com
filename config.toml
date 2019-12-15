@@ -50,12 +50,12 @@ verboseLog = true
   Title = "Just a Blog in the Park"
   # sharingicons = false
   disable_sri = true
-  hljs_version = "9.12.0"
+  hljs_version = "9.15.10"
   fa_version = "5.1.0"
 
   [params.highlight]
   # style = "github"
-  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "kotlin", "javascript", "ini",
+  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "go", "kotlin", "javascript", "ini",
                "java", "json", "markdown", "python", "ruby", "scala", "scheme", "sql", "tex"]
 
   [[params.social]]
