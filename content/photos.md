@@ -7,6 +7,12 @@ defaultcss = false
 
 {{< load-photoswipe >}}
 {{< pswp-gallery >}}
+  {{< pswp-figure link="/img/gallery/beautiful-bread-2.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
+  {{< pswp-figure link="/img/gallery/beautiful-bread.jpg" thumb="-thumb"
+                  size="2160x1440"
+                  caption="" >}}
   {{< pswp-figure link="/img/gallery/Espresso-maker.jpg" thumb="-thumb"
                   size="2160x1440"
                   caption="" >}}
