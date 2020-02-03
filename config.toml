@@ -2,7 +2,7 @@ languageCode = "en-us"
 title = "Just a Blog in the Park"
 baseUrl = "https://www.justabloginthepark.com"
 log = true
-copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2019"
+copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2020"
 titleCaseStyle = "Chicago"
 # enableGitInfo = true
 

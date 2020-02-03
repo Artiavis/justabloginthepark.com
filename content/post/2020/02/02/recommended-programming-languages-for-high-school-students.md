@@ -1,7 +1,7 @@
 +++
 title = "Recommended Programming Languages for High School Students"
-date = "2020-02-22:00:00-05:00"
-description = ""
+date = "2020-02-02T22:00:00-05:00"
+description = "Recommendations about good why Python is a good programming language for high school students."
 tags = ["programming", "education", "python", "javascript", "java"]
 +++
 
