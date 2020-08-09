@@ -44,6 +44,10 @@ verboseLog = true
   post = "/:year/:month/:day/:title/"
   page = "/:slug/"
 
+[markup]
+  [markup.highlight]
+    style = "monokai"
+
 [params]
   author = "Jeff Rabinowitz"
   date_format = "Mon Jan 02, 2006"
@@ -53,37 +57,38 @@ verboseLog = true
   hljs_version = "9.15.10"
   fa_version = "5.1.0"
 
-  [params.highlight]
-  # style = "github"
-  languages = ["bash", "clojure", "cs", "cpp", "css", "fsharp", "go", "kotlin", "javascript", "ini",
-               "java", "json", "markdown", "python", "ruby", "scala", "scheme", "sql", "tex"]
-
   [[params.social]]
+  label = "Photos"
   url = "/photos"
   fa_prefix = "fas"
   fa_icon = "fa-camera"
 
   [[params.social]]
+  label = "Tags"
   url = "/tags"
   fa_prefix = "fas"
   fa_icon = "fa-tags"
 
   [[params.social]]
+  label = "GitHub"
   url = "https://github.com/Artiavis"
   fa_prefix = "fab"
   fa_icon = "fa-github"
 
   [[params.social]]
+  label = "LinkedIn"
   url = "https://linkedin.com/in/JeffreyCRabinowitz"
   fa_prefix = "fab"
   fa_icon = "fa-linkedin"
 
   [[params.social]]
+  label = "Resume"
   url = "https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"
   fa_prefix = "fas"
   fa_icon = "fa-file-pdf"
 
   [[params.social]]
+  label = "Subscribe"
   url = "/index.xml"
   fa_prefix = "fas"
   fa_icon = "fa-rss-square"

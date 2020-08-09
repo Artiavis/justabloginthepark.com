@@ -11,7 +11,7 @@
         {{ if .Truncated }}
         ...<br />
         {{ if (.Params.tags) }}{{ partial "tags.html" . }}{{ end }}
-        <a class="button is-link" href="{{ .RelPermalink }}" style="height:28px">
+        <a class="button is-link" href="{{ .RelPermalink }}">
           Read more
           <span class="icon is-small">
             <i class="fas fa-angle-double-right"></i>

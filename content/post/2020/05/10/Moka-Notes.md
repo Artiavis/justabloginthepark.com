@@ -52,6 +52,8 @@ Watch that before you proceed:
 
 {{<youtube id="rpyBYuu-wJI">}}
 
+<br><br>
+
 Even after watching this video, though, I ran into a couple
 of technical difficulties. Here are my supplemental notes
 on Moka preparation and troubleshooting:

@@ -186,14 +186,14 @@ language.
 To aid with decision-making, I'll provide a table of abbreviated features and of
 expanded features, to help see where Lombok provides parity and where it does not.
 
-Feature               | Total Points | Lombok | Kotlin |
-----------------------|--------------|--------|--------|
-POJOs                 | 5            | 5      | 5      |
-Null Safety           | 3            | 1      | 3      |
-Util/Helper/Delegates | 3            | 2      | 3      |
-val/var               | 2            | 2      | 2      |
-Interop               | 10           | 9      | 9      |
-Total                 | 23           | 19     | 22     |
+|Feature               | Total Points | Lombok | Kotlin |
+|----------------------|--------------|--------|--------|
+|POJOs                 | 5            | 5      | 5      |
+|Null Safety           | 3            | 1      | 3      |
+|Util/Helper/Delegates | 3            | 2      | 3      |
+|val/var               | 2            | 2      | 2      |
+|Interop               | 10           | 9      | 9      |
+|Total                 | 23           | 19     | 22     |
 
 On its own turf, Lombok and Kotlin are very close. I gave some more points to
 Kotlin for null safety; although Lombok has `@NotNull`, it's not the same as

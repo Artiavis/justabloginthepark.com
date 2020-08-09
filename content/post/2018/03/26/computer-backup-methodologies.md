@@ -196,7 +196,7 @@ Summarizing [Dropbox's individual pricing plans](https://www.dropbox.com/individ
 and [Microsoft OneDrive's pricing plans](https://onedrive.live.com/about/en-US/plans/)
 yields the following prices for access in the US (where 1TB = 1,000GB):
 
-Price Plan | Dropbox | Google[^gpricnig] | Apple[^apricing] | Microsoft
+Price Plan | Dropbox | Google | Apple | Microsoft
 -----------|---------|-------------------|------------------|----------------
 Free       | 2GB     | 15GB              | 5GB              | 5GB 
 $12/year   | -       | -                 | 50GB             | -
@@ -206,9 +206,6 @@ $36/year   | -       | -                 | 200GB            | -
 $70/year   | -       | -                 | -                | 1TB, Microsoft Office included
 $100/year  | 1TB     | 1TB               | -                | 1TB and Microsoft Office for each of 5 people
 $120/year  | -       | -                 | 2TB              | -
-
-[^apricing]: Billed monthly only, so no discount for annualizing.
-[^gpricnig]: Google is vaguely in competition with Microsoft, trying to push their Google Office applications which compete with Microsoft's world renowned office suite, but has some attractive offerings of their own, like unlimited free photo backup (for consumer cameras and smartphone cameras).
 
 On paper, more is better, and it would seem like Microsoft or Google have more
 cost-effective plans, especially at cheaper price points.

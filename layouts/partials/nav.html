@@ -1,22 +1,32 @@
 <section class="section">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="/about">
-          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/about">
+          <img 
+            src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50" />
         </a>
-        <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+        <a class="navbar-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start"></div>
+        <div class="navbar-end">
           {{ range .Site.Params.social }}
-          <a class="level-item" href="{{ .url }}">
-            <span class="icon">
-              <i class="{{ .fa_prefix}} {{ .fa_icon }}"></i>
-            </span>
-          </a>
+          <div class="navbar-item">
+            <a href="{{ .url }}">
+              <span class="icon">
+                <i class="{{ .fa_prefix}} {{ .fa_icon }}"></i>
+              </span>
+              {{ .label }}
+            </a>
+          </div>
           {{ end }}
-        </nav>
+        </div>
       </div>
     </nav>
   </div>

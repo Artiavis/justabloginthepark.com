@@ -51,20 +51,20 @@ One of the more infamous examples is the confusion of auto-promoting in comparis
 operators, such as
 [Which equals operator... should be used in JavaScript comparisons?](https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons)
 
-> ```javascript
-> '' == '0'           // false
-> 0 == ''             // true
-> 0 == '0'            // true
-> 
-> false == 'false'    // false
-> false == '0'        // true
-> 
-> false == undefined  // false
-> false == null       // false
-> null == undefined   // true
-> 
-> ' \t\r\n ' == 0     // true
-> ```
+```javascript
+'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+
+false == 'false'    // false
+false == '0'        // true
+
+false == undefined  // false
+false == null       // false
+null == undefined   // true
+
+' \t\r\n ' == 0     // true
+```
 
 The fact that JavaScript has _two_ comparison flavors, `==`/`!=` and
 `===`/`!==`, is guaranteed to be a source of confusion and error for students.
@@ -89,7 +89,7 @@ The bad news is, in the case of `Array`, the behavior is an awkward hybrid of
 an actual array type, and `Object`, so it's easy to make mistakes and hard to
 spot them.
 
-```javascript
+````javascript
 var arr = [];
 arr[1] = 1; // Automatically extends the array to be as long as needed.
 arr; // [ undefined, 1 ]
@@ -102,7 +102,7 @@ for (var value of arr) {
 for (var key of arr) {
     console.info(key); // Prints undefined, 1, key
 }
-```
+````
 
 Arrays with object-like properties is not a feature, and it's arguably a mistake to have been
 put there in the first place. It creates room for all sorts of bugs that
