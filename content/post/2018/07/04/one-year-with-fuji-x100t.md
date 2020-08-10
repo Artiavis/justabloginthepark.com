@@ -3,8 +3,25 @@ title = "One year with Fujifilm X100T"
 date = "2018-07-04T12:11:14-04:00"
 description = "In which I reflect on one year with the Fujifilm X100T camera."
 tags = ["photography"]
-hljs = false
 defaultcss = false
+[[photos]]
+  link = "img/gallery/Snoozing-on-a-rainy-day.jpg"
+  size = "2160x1440"
+[[photos]]
+  link = "img/gallery/Haleakala-Sunrise.jpg"
+  size = "2160x1440"
+[[photos]]
+  link = "img/gallery/Going-Downtown-at-Dawn.jpg"
+  size = "2160x1440"
+[[photos]]
+  link = "img/gallery/Late-Nights-at-the-Piccolo-Cafe.jpg"
+  size = "2160x1440"
+[[photos]]
+  link = "img/gallery/Seattle-after-sunset.jpg"
+  size = "2160x1440"
+[[photos]]
+  link = "img/gallery/A-full-house.jpg"
+  size = "2160x1440"
 +++
 
 One year ago today, I resumed my long-adjourned photography hobby,
@@ -64,29 +81,7 @@ taken on the Fuji X100T using the default 35mm equivalent lens. For all of these
 shots, the only reason I was able to nab them was because this camera was small
 enough, flexible enough, and powerful enough to nail these shots.
 
-{{< load-photoswipe >}}
-{{< pswp-gallery >}}
-
-  {{< pswp-figure link="/img/gallery/Snoozing-on-a-rainy-day.jpg" thumb="-thumb"
-                  size="2160x1440"
-                  caption="Snoozing on a rainy day">}}
-  {{< pswp-figure link="/img/gallery/Haleakala-Sunrise.jpg" thumb="-thumb"
-                  size="2160x1440"
-                  caption="Haleakalā Sunrise">}}
-  {{< pswp-figure link="/img/gallery/Going-Downtown-at-Dawn.jpg" thumb="-thumb"
-                  size="1440x2160"
-                  caption="Going downtown at dawn">}}
-  {{< pswp-figure link="/img/gallery/Late-Nights-at-the-Piccolo-Cafe.jpg" thumb="-thumb"
-                  size="2160x1440"
-                  caption="Late nights at the Piccolo Cafe">}}
-  {{< pswp-figure link="/img/gallery/Seattle-after-sunset.jpg" thumb="-thumb"
-                  size="2160x1440"
-                  caption="Seattle after sunset">}}
-  {{< pswp-figure link="/img/gallery/A-full-house.jpg" thumb="-thumb"
-                  size="2160x1440"
-                  caption="A fully stocked bar">}}
-{{< /pswp-gallery >}}
-
+{{< mygallery >}}
 
 ## First year resuming photography retrospective
 

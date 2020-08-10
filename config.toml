@@ -48,6 +48,11 @@ verboseLog = true
   [markup.highlight]
     style = "monokai"
 
+[imaging]
+resampleFilter = "Lanczos"
+quality = 80
+anchor = "center"
+
 [params]
   author = "Jeff Rabinowitz"
   date_format = "Mon Jan 02, 2006"

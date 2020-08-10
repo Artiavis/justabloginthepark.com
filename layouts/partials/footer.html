@@ -4,10 +4,8 @@
   </div>
 </section>
 
-<script type="text/javascript" src="/js/bulmamenu.js" ></script>
-
-{{ if ( index .Params "hljs" | default true ) }}
-{{ end }}
+{{ $bulma := resources.Get "js/bulmamenu.js" | js.Build "bulmamenu.min.js" | resources.Minify }}
+<script type="text/javascript" src="{{ $bulma.RelPermalink }}" defer></script>
 
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics_async.html" . }}

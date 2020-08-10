@@ -4,10 +4,10 @@ if (window.loadphotoswipejs) {
 } 
 var loadphotoswipejs = 1;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     var items = []; // array of slide objects that will be passed to PhotoSwipe()
     // for every figure element on the page:
-    document.querySelectorAll('figure').forEach(function($figure, index) {
+    document.querySelectorAll('figure').forEach(($figure, index) => {
         if ($figure.className == 'no-photoswipe') return true;  // ignore any figures where class="no-photoswipe"
         var $a     = $figure.querySelector('a'),
             $img   = $figure.querySelector('img'),
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // update the item as soon as w and h are known (check every 30ms)
             var img = new Image(); 
             img.src = $src;
-            var wait = setInterval(function() {
+            var wait = setInterval(() => {
                 var w = img.naturalWidth,
                     h = img.naturalHeight;
                 if (w && h) {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Save the index of this image then add it to the array
         items.push(item);
         // Event handler for click on a figure
-        $figure.addEventListener('click', function(event) {
+        $figure.addEventListener('click', event => {
             event.preventDefault();  // prevent the normal behaviour i.e. load the <a> hyperlink
             // Get the PSWP element and initialize it with the desired options
             var $pswp = document.querySelector('.pswp');

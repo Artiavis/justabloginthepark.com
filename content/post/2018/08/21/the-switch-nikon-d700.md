@@ -3,8 +3,25 @@ title = "The Switch – Nikon D700"
 date = "2018-08-21T21:17:19-04:00"
 description = "To broaden my horizons, I borrowed the Nikon D700 full-frame DSLR. It was quite the experience."
 tags = ["photography"]
-hljs = false
 defaultcss = false
+[[photos]]
+  link = "img/gallery/bountiful-sushi.jpg"
+  size = "1440x960"
+[[photos]]
+  link = "img/gallery/twilit-flower-daydream.jpg"
+  size="2164x1440"
+[[photos]]
+  link="img/gallery/checkmate-potboiler.jpg"
+  size = "1440x1440"
+[[photos]]
+  link = "img/gallery/buses-only.jpg"
+  size = "2164x1440"
+[[photos]]
+  link = "img/gallery/the-daylight-thinker.jpg"
+  size = "1440x1440"
+[[photos]]
+  link = "img/gallery/red-shadow.jpg"
+  size = "2164x1440"
 +++
 
 At the beginning of July, 
@@ -63,23 +80,7 @@ Compared with my little Fuji, which is barely a pound on its lonesome, these wer
 bordering too egregious to actually use. Nevertheless, I powered through,
 knowing my time was short.
 
-{{< load-photoswipe >}}
-{{< pswp-gallery >}}
-  {{< pswp-figure link="/img/gallery/bountiful-sushi.jpg" thumb="-thumb"
-                  size="1822x1440" >}}
-  {{< pswp-figure link="/img/gallery/twilit-flower-daydream.jpg" thumb="-thumb"
-                  size="2164x1440" >}}
-  {{< pswp-figure link="/img/gallery/checkmate-potboiler.jpg" thumb="-thumb"
-                  size="1440x1440">}}
-  {{< pswp-figure link="/img/gallery/just-passin-thru.jpg" thumb="-thumb"
-                  size="1440x1440" >}}
-  {{< pswp-figure link="/img/gallery/buses-only.jpg" thumb="-thumb"
-                  size="2164x1440" >}}
-  {{< pswp-figure link="/img/gallery/the-daylight-thinker.jpg" thumb="-thumb"
-                  size="1440x1440" >}}
-  {{< pswp-figure link="/img/gallery/red-shadow.jpg" thumb="-thumb"
-                  size="2164x1440" >}}
-{{< /pswp-gallery >}}
+{{< mygallery >}}
 
 The second thing I noticed, once I got past the weight, was the _performance_.
 
