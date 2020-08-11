@@ -4,7 +4,7 @@
   </div>
 </section>
 
-{{ $bulma := resources.Get "js/bulmamenu.js" | js.Build "bulmamenu.min.js" | resources.Minify }}
+{{ $bulma := resources.Get "js/bulmamenu.js" | resources.Minify }}
 <script type="text/javascript" src="{{ $bulma.RelPermalink }}" defer></script>
 
 {{ if .Site.GoogleAnalytics }}

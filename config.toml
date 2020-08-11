@@ -50,7 +50,7 @@ verboseLog = true
 
 [imaging]
 resampleFilter = "Lanczos"
-quality = 80
+quality = 90
 anchor = "center"
 
 [params]

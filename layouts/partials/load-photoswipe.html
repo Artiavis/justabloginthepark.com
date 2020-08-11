@@ -3,7 +3,7 @@
   {{ $.Page.Scratch.Set "photoswipeloaded" 1 }}
 
 <!-- <link rel="stylesheet" href="/css/hugo-easy-gallery.min.css" /> -->
-{{ $lps := resources.Get "js/load-photoswipe.js" | resources.Minify | js.Build "lps.min.js" }}
+{{ $lps := resources.Get "js/load-photoswipe.js" | resources.Minify }}
 <script type="text/javascript" src="{{ $lps.RelPermalink }}" defer></script>
 <!-- Photoswipe css/js libraries -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha256-rlldBDOCxqXAE1fRopHG2SqpgWisq17/3Oleo+1CBKo=" crossorigin="anonymous" />

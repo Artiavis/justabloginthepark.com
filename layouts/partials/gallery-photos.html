@@ -5,23 +5,24 @@
   {{ range . }}
   {{- $thumb := .src | default (printf "%s." .thumb | replace .link ".") }}
   {{- $i := resources.Get .link }}
-  {{- $t := $i.Fill "250x250 Center" }}
+  {{- $t := $i.Fit "400x400 Center" }}
   <div class="column is-one-quarter-desktop is-half-tablet">
     <div class="card">
       <div class="card-image">
           <figure class="image is-square">
             <div class="img" style="background-image: url('{{ $t.RelPermalink }}');">
-              <img class="psthumb" itemprop="thumbnail" src="{{ $t.RelPermalink }}" alt="{{ .alt | default .caption }}" />
+              <img itemprop="thumbnail" src="{{ $t.RelPermalink }}" alt="{{ .alt | default .caption }}" />
             </div>
-            <a  href="{{ $i.RelPermalink }}" itemprop="contentUrl" data-size="{{ .size }}" data-author="{{ .author }}"></a>
-            {{- if or (or (.title) (.caption)) (.attr)}}
-            <!-- <figcaption>
+            <a  href="{{ $i.RelPermalink }}" itemprop="contentUrl" data-size="{{ .size }}" data-author="{{ .author }}">
+            </a>
+            <!-- {{- if or (or (.title) (.caption)) (.attr)}}
+            <figcaption>
               <h4>{{.title}}</h4>
               {{- if or .caption .attr}}
                 <p>{{- .caption -}}</p>
               {{- end }}
-            </figcaption> -->
-          {{- end }}
+            </figcaption>
+          {{- end }} -->
           </figure>
       </div>
     </div>
