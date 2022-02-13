@@ -2,7 +2,7 @@ languageCode = "en-us"
 title = "Just a Blog in the Park"
 baseUrl = "https://www.justabloginthepark.com"
 log = true
-copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2021"
+copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2022"
 titleCaseStyle = "Chicago"
 # enableGitInfo = true
 
@@ -88,7 +88,7 @@ anchor = "center"
 
   [[params.social]]
   label = "Resume"
-  url = "https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"
+  url = "https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1"
   fa_prefix = "fas"
   fa_icon = "fa-file-pdf"
 
