@@ -86,7 +86,7 @@ on-the-fly during games.
 ### C Compilers
 
 This one is more of a cool hack than an actual productivity tool, but
-for me it really captures the essence of TiddlyWiki:
+for me it really captures the essence of TiddlyWiki
+(Editor's note: the original Twitter account was deleted so here's a screenshot instead):
 
-{{< tweet 1060956624561393665 >}}
-{{< tweet 1060964578941718529 >}}
+![Playing with TiddlyWiki](/img/2020/12/31/tweet_radix42_1060956624561393665.png)
