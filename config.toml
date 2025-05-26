@@ -2,13 +2,14 @@ languageCode = "en-us"
 title = "Just a Blog in the Park"
 baseUrl = "https://www.justabloginthepark.com"
 log = true
-copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2023"
+copyright = "&copy; <a href=\"https://github.com/Artiavis\">Jeff Rabinowitz</a>, 2025"
 titleCaseStyle = "Chicago"
 # enableGitInfo = true
 
 defaultLayout = "post"
 
-paginate = 5
+[pagination]
+pagerSize = 5
 theme = "hemingway"
 # googleAnalytics = "UA-45496110-1"
 disqusShortname = "justabloginthepark"
@@ -18,15 +19,10 @@ verboseLog = true
 [privacy]
 [privacy.disqus]
   disable = true
-[privacy.googleAnalytics]
-  anonymizeIP = true
-  disable = false
-  respectDoNotTrack = true
-  useSessionStorage = true
 [privacy.instagram]
   disable = false
   simple = true
-[privacy.twitter]
+[privacy.x]
   disable = false
   enableDNT = true
   simple = true
@@ -45,6 +41,9 @@ verboseLog = true
   page = "/:slug/"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     style = "monokai"
 

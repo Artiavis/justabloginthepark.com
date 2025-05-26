@@ -7,6 +7,3 @@
 {{ $bulma := resources.Get "js/bulmamenu.js" | resources.Minify }}
 <script type="text/javascript" src="{{ $bulma.RelPermalink }}" defer></script>
 
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}

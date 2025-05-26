@@ -79,7 +79,7 @@ final semester, I do think that it's more fulfilling than taking arbitrary
 filler classes. Granted, I could be taking so-called &ldquo;interesting filler
 classes&rdquo; like _Psych 101_ or _Public Speaking_, but I kind of want my
 tuition dollars to go towards something meaningful. 
-<i class="fas fa-smile"></i>
+{{< fa "smile" >}}
 
 
 ![Spring 2014 Tentative Schedule](/img/Spring2014_TentativeSchedule.png)

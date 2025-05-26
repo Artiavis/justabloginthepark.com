@@ -3,10 +3,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
 <script defer src="https://use.fontawesome.com/releases/v{{ .Site.Params.fa_version }}/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v{{ .Site.Params.fa_version }}/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v{{ .Site.Params.fa_version }}/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
 {{ if ( index .Params "defaultcss" | default true ) }}
-    <link rel="stylesheet" href="/css/images.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/images.min.css">
 {{ end }}

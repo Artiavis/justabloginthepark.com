@@ -1,10 +1,10 @@
-{{ if .Site.DisqusShortname }}
+{{ if .Site.Params.disqusShortname }}
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     <script type="text/javascript">
-      var disqus_shortname = '{{ .Site.DisqusShortname }}';
+      var disqus_shortname = '{{ .Site.Params.disqusShortname }}';
       var disqus_loaded = false;
 
       function disqus() {
